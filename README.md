@@ -1,10 +1,8 @@
 <div align="center">
 
-# 🧠 DSA Logic Building Playbook
+<img src="./assets/hero-banner.svg" width="100%" alt="DSA Logic Building Playbook Banner" />
 
-### 🚀 From Test Case to Optimal Code — The Systematic Mental Model for DSA & Interviews
-
-<br/>
+<br/><br/>
 
 > **"DSA ki problem me logic kaise sochein"** — Test case dekh ke input/output se pattern nikalna, brute force se optimal tak jana, aur Java me clean code likhna. Ek baar padho, har problem pe yahi steps lagao.
 
@@ -35,7 +33,9 @@
 <br/>
 
 <a id="ye-repo-kis-liye-hai"></a>
-## 🎯 Ye Repo Kis Liye Hai
+<div align="center">
+  <img src="./assets/headers/header-about.svg" width="100%" alt="Ye Repo Kis Liye Hai" />
+</div>
 
 Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati hai:
 
@@ -90,16 +90,18 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 <br/>
 
 <a id="1-golden-rules"></a>
-## 1. 🌟 Golden Rules
+<div align="center">
+  <img src="./assets/headers/header-01.svg" width="100%" alt="01. Golden Rules" />
+</div>
 
 > [!IMPORTANT]
-> Har session shuru karne se pehle ye 5 rules dimag me baitha lo:
-
-1. 🚫 **Code se pehle logic.** Keyboard tab chhuo jab paper pe pata ho ki kya likhna hai.
-2. 🪜 **Seedha optimal nahi aata.** Pehle working brute force banao, phir bottleneck dekh ke improve karo.
-3. 🧪 **Test case sabse bada hint hai.** Input se output kaise bana, haath se pen-paper pe karke dekho.
-4. ⏱️ **Constraints batate hain technique.** Problem ka `n` kitna bada hai, wahi bata deta hai kaunsa algorithm chalega.
-5. 🔁 **Problem naya nahi hota, pattern purana hota hai.** DSA me ginke sirf 15-20 fundamental patterns hote hain.
+> **Har coding session shuru karne se pehle ye 5 non-negotiable rules dimag me baitha lo:**
+> 
+> 1. 🚫 **RULE 01 • Code Se Pehle Logic:** Keyboard tab chhuo jab paper pe pata ho ki exact kya likhna hai.
+> 2. 🪜 **RULE 02 • Seedha Optimal Nahi Aata:** Pehle working brute force banao, phir bottleneck dekh ke improve karo.
+> 3. 🧪 **RULE 03 • Test Case Sabse Bada Hint Hai:** Input se output kaise bana, haath se pen-paper pe trace karke dekho.
+> 4. ⏱️ **RULE 04 • Constraints Batate Hain Technique:** Problem ka `n` kitna bada hai, wahi bata deta hai kaunsa algorithm chalega.
+> 5. 🔁 **RULE 05 • Problem Naya Nahi Hota, Pattern Purana Hota Hai:** DSA me ginke sirf 15–20 fundamental patterns hote hain.
 
 <br/>
 
@@ -112,27 +114,15 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 <br/>
 
 <a id="2-seven-step-framework"></a>
-## 2. 🪜 Seven Step Framework
+<div align="center">
+  <img src="./assets/headers/header-02.svg" width="100%" alt="02. Seven Step Framework" />
+</div>
 
 Har problem pe ye structured sequence follow karo:
 
-```mermaid
-flowchart LR
-    Step1["<b>Step 1</b><br/>Problem Apne<br/>Words Me Bolo"] --> Step2["<b>Step 2</b><br/>I/O Aur<br/>Constraints"]
-    Step2 --> Step3["<b>Step 3</b><br/>Test Case Ko<br/>Haath Se Solve"]
-    Step3 --> Step4["<b>Step 4</b><br/>Brute Force &<br/>Complexity"]
-    Step4 --> Step5["<b>Step 5</b><br/>Target<br/>Complexity"]
-    Step5 --> Step6["<b>Step 6</b><br/>Pattern &<br/>Optimize"]
-    Step6 --> Step7["<b>Step 7</b><br/>Edge Cases &<br/>Clean Code"]
-    
-    style Step1 fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style Step2 fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style Step3 fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#fff
-    style Step4 fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
-    style Step5 fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
-    style Step6 fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#fff
-    style Step7 fill:#1e293b,stroke:#6366f1,stroke-width:2px,color:#fff
-```
+<div align="center">
+  <img src="./assets/seven-steps.svg" width="100%" alt="The 7-Step Problem Solving Framework" />
+</div>
 
 <br/>
 
@@ -157,7 +147,9 @@ flowchart LR
 <br/>
 
 <a id="3-problem-ko-samjho"></a>
-## 3. 🔎 Problem Ko Samjho
+<div align="center">
+  <img src="./assets/headers/header-03.svg" width="100%" alt="03. Problem Ko Samjho" />
+</div>
 
 Problem padhne ke turant baad apne aap se ye **5 basic questions** poochho:
 
@@ -194,7 +186,9 @@ Output ka structure hi aksar data structure reveal kar deta hai:
 <br/>
 
 <a id="4-test-case-se-logic-kaise-nikale"></a>
-## 4. 🧪 Test Case Se Logic Kaise Nikale
+<div align="center">
+  <img src="./assets/headers/header-04.svg" width="100%" alt="04. Test Case Se Logic Kaise Nikale" />
+</div>
 
 > [!WARNING]
 > Ye wo critical step hai jo 90% log jaldbazi me skip karte hain, aur isi wajah se unka logic kabhi nahi banta.
@@ -277,7 +271,9 @@ Sirf question ke diye test case pe rely mat karo. Khud banao:
 <br/>
 
 <a id="5-brute-force-hamesha-pehle"></a>
-## 5. 🔨 Brute Force Hamesha Pehle
+<div align="center">
+  <img src="./assets/headers/header-05.svg" width="100%" alt="05. Brute Force Hamesha Pehle" />
+</div>
 
 Brute force ek **safety net** hai. Ye prove karta hai ki tumhe problem 100% samajh aa chuki hai.
 
@@ -309,19 +305,21 @@ Brute force likhne ya sochne ke baad **ek hi sawal poochho:**
 <br/>
 
 <a id="6-constraints-se-complexity-pehchano"></a>
-## 6. ⏱️ Constraints Se Complexity Pehchano
+<div align="center">
+  <img src="./assets/headers/header-06.svg" width="100%" alt="06. Constraints Se Complexity Pehchano" />
+</div>
 
 Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni fast solution chahiye:
 
-| `n` ka Size | Allowed Time Complexity | Kaunsi Techniques Lag Sakti Hain |
-| :--- | :---: | :--- |
-| **`n ≤ 10`** | `O(n!)` | Permutations, Backtracking |
-| **`n ≤ 20`** | `O(2ⁿ)` | Subsets generation, Bitmask DP, Backtracking |
-| **`n ≤ 500`** | `O(n³)` | 3 nested loops, Floyd-Warshall, 3D Dynamic Programming |
-| **`n ≤ 5,000`** | `O(n²)` | 2 nested loops, 2D Dynamic Programming |
-| **`n ≤ 10⁵`** | `O(n log n)` | Sorting, Heap, Binary Search, Divide & Conquer |
-| **`n ≤ 10⁶`** | `O(n)` | Hashing, Two Pointers, Sliding Window, Prefix Sum |
-| **`n ≥ 10⁹`** | `O(log n)` ya `O(1)` | Binary Search, Mathematical Formula, Bit Manipulation |
+| `n` ka Size | Allowed Time Complexity | Speed Category | Kaunsi Techniques Lag Sakti Hain |
+| :--- | :---: | :---: | :--- |
+| **`n ≤ 10`** | `O(n!)` | 🔴 Extremely Slow (Factorial) | Permutations, Backtracking |
+| **`n ≤ 20`** | `O(2ⁿ)` | 🔴 Exponential | Subsets generation, Bitmask DP, Backtracking |
+| **`n ≤ 500`** | `O(n³)` | 🟠 Cubic | 3 nested loops, Floyd-Warshall, 3D Dynamic Programming |
+| **`n ≤ 5,000`** | `O(n²)` | 🟡 Quadratic | 2 nested loops, 2D Dynamic Programming |
+| **`n ≤ 10⁵`** | `O(n log n)` | 🟢 Linearithmic (Optimal) | Sorting, Heap, Binary Search, Divide & Conquer |
+| **`n ≤ 10⁶`** | `O(n)` | 🟢 Linear (Fast) | Hashing, Two Pointers, Sliding Window, Prefix Sum |
+| **`n ≥ 10⁹`** | `O(log n)` ya `O(1)` | ⚡ Lightning Fast | Binary Search, Mathematical Formula, Bit Manipulation |
 
 <br/>
 
@@ -345,7 +343,9 @@ Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni f
 <br/>
 
 <a id="7-keyword-se-technique-pehchano"></a>
-## 7. 🔑 Keyword Se Technique Pehchano
+<div align="center">
+  <img src="./assets/headers/header-07.svg" width="100%" alt="07. Keyword Se Technique Pehchano" />
+</div>
 
 Problem statement ke words me hi solution ka hint chhupa hota hai:
 
@@ -381,7 +381,9 @@ Problem statement ke words me hi solution ka hint chhupa hota hai:
 <br/>
 
 <a id="8-core-patterns-with-java-templates"></a>
-## 8. 🧱 Core Patterns With Java Templates
+<div align="center">
+  <img src="./assets/headers/header-08.svg" width="100%" alt="08. Core Patterns With Java Templates" />
+</div>
 
 <br/>
 
@@ -608,61 +610,98 @@ for (int x : arr) {
 <br/>
 
 <a id="9-thinking-ladder"></a>
-## 9. 🪜 Thinking Ladder
+<div align="center">
+  <img src="./assets/headers/header-09.svg" width="100%" alt="09. Thinking Ladder" />
+</div>
 
-Har problem solve karte waqt ye 8 steps sequentially chadhna hai. Koi bhi step skip mat karo:
-
-```mermaid
-graph TD
-    L1["<b>1. 👁️ Observe</b><br/>Input se output kaise bana? Kya badla, kya same raha?"] --> L2["<b>2. ✍️ Manual Solve</b><br/>Kagaz pe insaan ki tarah solve karo"]
-    L2 --> L3["<b>3. 🏷️ Naam Do</b><br/>Kaunsa kaam repeat hua (Loop)? Kya yaad rakha (Var/DS)?"]
-    L3 --> L4["<b>4. 🔨 Brute Force</b><br/>Sabse seedha tareeka likho aur complexity nikalo"]
-    L4 --> L5["<b>5. 🔍 Waste Dhoondo</b><br/>Brute force me kaunsa kaam repeat/bekaar ho raha hai?"]
-    L5 --> L6["<b>6. 🧰 Tool Chuno</b><br/>Is specific waste ko hatane wala exact tool select karo"]
-    L6 --> L7["<b>7. 🧪 Dry Run</b><br/>Chhote example pe trace table bana ke verify karo"]
-    L7 --> L8["<b>8. 💻 Code Karo</b><br/>Dry run ke exact logic ko clean Java code me convert karo"]
-    
-    style L1 fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style L2 fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
-    style L3 fill:#1e293b,stroke:#818cf8,stroke-width:2px,color:#fff
-    style L4 fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
-    style L5 fill:#1e293b,stroke:#ef4444,stroke-width:2px,color:#fff
-    style L6 fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#fff
-    style L7 fill:#1e293b,stroke:#06b6d4,stroke-width:2px,color:#fff
-    style L8 fill:#1e293b,stroke:#a855f7,stroke-width:2px,color:#fff
-```
+Har DSA problem pe ye **8 seedhiyan (steps)** sequentially chadhna hai. Seedha code pe jump mat karo — is framework se kisi bhi tough problem ka logic 10 minute me unlock ho jata hai:
 
 <br/>
 
-| # | Seedhi (Step) | Khud Se Poochhe Jane Wale Sawal |
-| :---: | :--- | :--- |
-| **1** | **Observe** | Input se output kaise bana? Kya badla, kya untouched raha? |
-| **2** | **Manual Solve** | Agar computer na hota, to kagaz pe pen se main kya karta? |
-| **3** | **Naam Do** | Maine kaunsa action baar-baar kiya? Agle step ke liye kya yaad rakha? |
-| **4** | **Brute Force** | Sabse seedha basic approach kya hai? Iska time & space kya hai? |
-| **5** | **Waste Dhoondo** | Brute force me kahan computation waste ya redundant ho raha hai? |
-| **6** | **Tool Chuno** | Is waste ko O(1) ya O(log n) me reduce karne wala tool kaunsa hai? |
-| **7** | **Dry Run** | Ek chhote 3-4 element ke test case pe trace table banao. |
-| **8** | **Code** | Verified dry run ko line-by-line code me likho. |
+<div align="center">
+  <img src="./assets/thinking-ladder.svg" width="100%" alt="The 8-Step DSA Thinking Ladder Infographic" />
+</div>
 
 <br/>
 
-### 🧰 Waste Ko Tool Se Match Karo
+### 🗺️ The 4 Phases of Thinking Ladder
+
+<br/>
+
+#### 🔵 Phase 1: Problem Exploration (Paper Work)
+* **Step 1: 👁️ Observe (Gaur Se Dekho)**
+  * **Sawal:** Input se output kaise bana? Kaunsi values change hui aur kaunsi same rahi?
+  * **Action:** Diye gaye test case ko dhyan se dekho. Numbers shift hue, sort hue, ya filter hue?
+  * **Trap:** *Bina input-output ka relation samjhe seedha formula dhoondna.*
+
+* **Step 2: ✍️ Manual Solve (Insaan Ki Tarah Karo)**
+  * **Sawal:** Agar mujhe pen-paper pe bina kisi coding ke ye solve karna hota, to main kya karta?
+  * **Action:** Chhote sample input (3-4 elements) pe apne haath se answer calculate karo.
+  * **Trap:** *Pehle hi computer loops ke baare me sochna.*
+
+<br/>
+
+#### 🟡 Phase 2: Baseline & Formulation
+* **Step 3: 🏷️ Naam Do (Loop & Variables Pehchano)**
+  * **Sawal:** Maine manually solve karte waqt kaunsa kaam baar-baar kiya, aur kya yaad rakha?
+  * **Action:** Jo kaam baar-baar repeat hua &rarr; **Wahi Loop hai**. Agle step ke liye jo yaad rakha &rarr; **Wahi Variable / Data Structure hai**.
+  * **Trap:** *Seedha complex variables declare kar dena bina purpose jaane.*
+
+* **Step 4: 🔨 Brute Force (Safety Net Banao)**
+  * **Sawal:** Sabse basic, bina kisi smart trick ka tareeka kya hai? Iski complexity kya hai?
+  * **Action:** Nested loops ya simple recursion socho jo 100% correct answer de (bhale slow ho).
+  * **Trap:** *Brute force ko bekaar samajh ke skip karna.* (Ye tumhara baseline reference hai!)
+
+<br/>
+
+#### 🔴 Phase 3: The Optimization Breakthrough
+* **Step 5: 🔍 Waste Dhoondo (Find the Bottleneck)**
+  * **Sawal:** Brute force me kaunsa computation repeat ya bekaar ho raha hai?
+  * **Action:** Dekho kahan loop baar-baar poora array scan kar raha hai, ya same subproblem recalculate ho raha hai.
+  * **Trap:** *Code optimize karne ki koshish karna jabki algorithm hi inefficient ho.*
+
+* **Step 6: 🧰 Tool Chuno (Pick the Weapon)**
+  * **Sawal:** Is specific waste ko hatane wala exact data structure / algorithm kaunsa hai?
+  * **Action:** Niche diye gaye **Prescription Matrix** se match karo: Search slow hai to HashMap, range slow hai to Prefix Sum, repeated subproblems hain to DP!
+  * **Trap:** *Random data structures guess karna.*
+
+<br/>
+
+#### 🟢 Phase 4: Execution & Verification
+* **Step 7: 🧪 Dry Run (Trace Table Verification)**
+  * **Sawal:** Kya ye tool mere test case pe flawlessly step-by-step kaam kar raha hai?
+  * **Action:** Ek chhota trace table banao (variables ki values har iteration me trace karo). Extreme edge cases check karo.
+  * **Trap:** *Bina dry run kiye seedha IDE me code likhna.*
+
+* **Step 8: 💻 Optimal Code (Clean Java Implementation)**
+  * **Sawal:** Dry run ke table ko clean code me kaise convert karein?
+  * **Action:** verified trace table ke logic ko line-by-line syntax me translate karo. Boundary checks pehle likho.
+  * **Result:** **100% Accepted (AC) without TLE on First Submission! 🎯**
+
+<br/>
+
+---
+
+<br/>
+
+### 🧰 Waste Ko Tool Se Match Karo (The Prescription Matrix)
 
 > [!TIP]
-> **Ye is poori guide ka sabse powerful concept hai.** Brute force me jo bhi **waste** dikhe, uska exact ilaaj ye table deta hai:
+> **Ye is poori playbook ka sabse powerful shortcut hai.** Brute force ka bottleneck pehchano aur direct right tool uthao:
 
-| Brute Force Me Jo Waste Dikh Raha Hai | Uska Ilaaj (Right Tool) |
-| :--- | :--- |
-| 🔁 Baar baar linear scan karna: *"ye element pehle dekha tha ya nahi?"* | **HashMap / HashSet** (`O(1)` lookup) |
-| ➕ Baar baar kisi range ka sum ya product compute karna | **Prefix Sum / Suffix Array** (`O(1)` range queries) |
-| 🔢 Har pair check karna, jabki array sorted hai ya sort ho sakta hai | **Sort + Two Pointers** (`O(n)` scan) |
-| 🪟 Subarray/window ka same hissa har index pe recalculate karna | **Sliding Window** (Add right, Remove left) |
-| 🎯 Monotonic range me ek-ek karke linear search karna | **Binary Search** (`O(log n)` reduction) |
-| 🔄 Same subproblem recursion tree me baar-baar repeat hona | **DP / Memoization Cache** |
-| 🥞 Pichhla element yaad rakhna ya matching closing bracket dhoondna | **Stack** (LIFO) |
-| 🏔️ Har step pe dynamic min ya max element dhoondna | **Heap / PriorityQueue** (`O(log n)`) |
-| 📏 Overlapping intervals ka random unordered hona | **Sort By Start Time** |
+<br/>
+
+| # | 🚨 Brute Force Me Jo Waste / Bottleneck Hai | 🧰 Uska Exact Ilaaj (Tool) | ⚡ Complexity Drop | 💡 Live Example Problem |
+| :---: | :--- | :--- | :---: | :--- |
+| **1** | Baar-baar linear search: *"kya ye element pehle dekha tha?"* | **`HashMap` / `HashSet`** | `O(n) &rarr; O(1)` | Two Sum, Subarray Sum Equals K |
+| **2** | Har query pe range ka sum ya product baar-baar calculate karna | **Prefix Sum / Suffix Array** | `O(n) &rarr; O(1)` | Range Sum Query, Product Except Self |
+| **3** | Har pair check karna, jabki array sorted hai ya sort ho sakta hai | **Sort + Two Pointers** | `O(n²) &rarr; O(n)` | 3Sum, Container With Most Water |
+| **4** | Subarray/window ka common part har step pe recalculate karna | **Sliding Window** | `O(n²) &rarr; O(n)` | Longest Substring Without Repeating |
+| **5** | Monotonic sequence me ek-ek step aage badh ke dhoondna | **Binary Search (on Answer)** | `O(n) &rarr; O(log n)` | Koko Bananas, Search Rotated Array |
+| **6** | Same subproblem recursion tree me baar-baar solve hona | **Dynamic Programming (DP)** | `O(2ⁿ) &rarr; O(n)` | Coin Change, Climbing Stairs |
+| **7** | Pichhle elements ka order yaad rakhna ya matching pairs (LIFO) | **Monotonic Stack** | `O(n²) &rarr; O(n)` | Daily Temperatures, Valid Parentheses |
+| **8** | Har step pe continuous dynamic min ya max element dhoondna | **Heap / PriorityQueue** | `O(n) &rarr; O(log n)` | Top K Frequent, Merge K Sorted Lists |
+| **9** | Random unordered intervals me overlap check karna | **Sort by Start Time** | `O(n²) &rarr; O(n log n)` | Merge Intervals, Meeting Rooms |
 
 <br/>
 
@@ -675,7 +714,9 @@ graph TD
 <br/>
 
 <a id="10-worked-examples-step-by-step"></a>
-## 10. 💡 Worked Examples Step by Step
+<div align="center">
+  <img src="./assets/headers/header-10.svg" width="100%" alt="10. Worked Examples Step by Step" />
+</div>
 
 Har example me wahi **Thinking Ladder** framework lagaya gaya hai: test case observation se shuru, clean Java code pe khatam.
 
@@ -1226,7 +1267,9 @@ private void go(int[] nums, int start, List<Integer> path, List<List<Integer>> r
 <br/>
 
 <a id="11-test-case-padhne-ki-6-techniques"></a>
-## 11. 🔬 Test Case Padhne Ki 6 Techniques
+<div align="center">
+  <img src="./assets/headers/header-11.svg" width="100%" alt="11. Test Case Padhne Ki 6 Techniques" />
+</div>
 
 Jab logic bilkul na soojh raha ho, sample test case ko in **6 nazron** se dekho:
 
@@ -1277,7 +1320,9 @@ Har tough problem solve karte waqt ye 7 sentences complete karo:
 <br/>
 
 <a id="12-edge-cases-checklist"></a>
-## 12. ✅ Edge Cases Checklist
+<div align="center">
+  <img src="./assets/headers/header-12.svg" width="100%" alt="12. Edge Cases Checklist" />
+</div>
 
 Final code submit karne se pehle ye 9 checks zaroor verify karo:
 
@@ -1302,7 +1347,9 @@ Final code submit karne se pehle ye 9 checks zaroor verify karo:
 <br/>
 
 <a id="13-jab-atak-jao-to-kya-karo"></a>
-## 13. 🆘 Jab Atak Jao To Kya Karo
+<div align="center">
+  <img src="./assets/headers/header-13.svg" width="100%" alt="13. Jab Atak Jao To Kya Karo" />
+</div>
 
 Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist use karo:
 
@@ -1329,7 +1376,9 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 <br/>
 
 <a id="14-practice-plan"></a>
-## 14. 📅 Practice Plan
+<div align="center">
+  <img src="./assets/headers/header-14.svg" width="100%" alt="14. Practice Plan" />
+</div>
 
 <br/>
 
@@ -1345,35 +1394,28 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 
 ### 🗺️ Suggested Learning Roadmap
 
-```text
-Arrays & Strings  ──►  HashMap / HashSet  ──►  Two Pointers  ──►  Sliding Window
-       │
-       ▼
-Prefix Sum        ──►  Binary Search      ──►  Stack & Queue ──►  Linked List
-       │
-       ▼
-Recursion & Backtracking  ──►  Binary Trees  ──►  Graphs (BFS / DFS)
-       │
-       ▼
-Heap (PriorityQueue)     ──►  Greedy Algorithms  ──►  Dynamic Programming (DP)
-```
+<br/>
+
+<div align="center">
+  <img src="./assets/roadmap.svg" width="100%" alt="DSA Pattern Mastery Roadmap" />
+</div>
 
 <br/>
 
 ### 📋 Recommended Problems (Thinking Ladder Apply Karo)
 
-| # | Problem | Core Pattern Hint *(pehle mat dekho!)* |
-| :---: | :--- | :--- |
-| **1** | Two Sum II | Sorted input array + target pair &rarr; **Two Pointers** |
-| **2** | Best Time to Buy and Sell Stock | Running minimum price track karo &rarr; **Single Pass Greedy** |
-| **3** | Longest Substring Without Repeating Characters | Dynamic unique window &rarr; **Sliding Window + Set** |
-| **4** | 3Sum | Sort karo + ek fix karo + remaining pe **Two Pointers** (duplicates skip karo) |
-| **5** | Daily Temperatures | Next greater element dhoondna &rarr; **Monotonic Decreasing Stack** |
-| **6** | Search in Rotated Sorted Array | Modified **Binary Search** (pehchano kaunsa half strictly sorted hai) |
-| **7** | Top K Frequent Elements | Frequency count karo + **Min-Heap of size K** |
-| **8** | House Robber | Adjacent pick disallowed &rarr; **DP (Include / Exclude choice)** |
-| **9** | Course Schedule | Prerequisite dependency graph &rarr; **Topological Sort / Cycle Detection** |
-| **10** | Permutations | All orderings &rarr; **Backtracking with visited tracking** |
+| # | Problem | Difficulty | Core Pattern Hint *(pehle mat dekho!)* |
+| :---: | :--- | :---: | :--- |
+| **1** | Two Sum II | 🟢 Easy | Sorted input array + target pair &rarr; **Two Pointers** |
+| **2** | Best Time to Buy and Sell Stock | 🟢 Easy | Running minimum price track karo &rarr; **Single Pass Greedy** |
+| **3** | Longest Substring Without Repeating Characters | 🟡 Medium | Dynamic unique window &rarr; **Sliding Window + Set** |
+| **4** | 3Sum | 🟡 Medium | Sort karo + ek fix karo + remaining pe **Two Pointers** (duplicates skip karo) |
+| **5** | Daily Temperatures | 🟡 Medium | Next greater element dhoondna &rarr; **Monotonic Decreasing Stack** |
+| **6** | Search in Rotated Sorted Array | 🟡 Medium | Modified **Binary Search** (pehchano kaunsa half strictly sorted hai) |
+| **7** | Top K Frequent Elements | 🟡 Medium | Frequency count karo + **Min-Heap of size K** |
+| **8** | House Robber | 🟡 Medium | Adjacent pick disallowed &rarr; **DP (Include / Exclude choice)** |
+| **9** | Course Schedule | 🟡 Medium | Prerequisite dependency graph &rarr; **Topological Sort / Cycle Detection** |
+| **10** | Permutations | 🟡 Medium | All orderings &rarr; **Backtracking with visited tracking** |
 
 <br/>
 
@@ -1394,7 +1436,9 @@ Heap (PriorityQueue)     ──►  Greedy Algorithms  ──►  Dynamic Progra
 <br/>
 
 <a id="15-one-page-quick-revision"></a>
-## 15. ⚡ One Page Quick Revision
+<div align="center">
+  <img src="./assets/headers/header-15.svg" width="100%" alt="15. One Page Quick Revision" />
+</div>
 
 <br/>
 
@@ -1432,7 +1476,9 @@ Heap (PriorityQueue)     ──►  Greedy Algorithms  ──►  Dynamic Progra
 <br/>
 
 <a id="16-contributing"></a>
-## 16. 🤝 Contributing
+<div align="center">
+  <img src="./assets/headers/header-16.svg" width="100%" alt="16. Contributing" />
+</div>
 
 Is open-source guide ko aur behtar banane ke liye community contributions welcome hain!
 

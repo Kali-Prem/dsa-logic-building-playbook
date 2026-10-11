@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="320" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="heroTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <!-- Subtitle Gradient -->
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- Chip Gradients -->
+    <linearGradient id="chip1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="chip2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <linearGradient id="chip3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="chip4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="heroGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softAura" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+    </filter>
+  </defs>
+
+  <style>
+    .hero-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.5px; }
+    .hero-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 1.5px; }
+    .hero-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; }
+    .chip-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; }
+  </style>
+
+  <!-- Container Base -->
+  <rect x="2" y="2" width="1196" height="316" rx="20" fill="url(#heroBg)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Ambient Glowing Orbs in Background -->
+  <circle cx="200" cy="100" r="120" fill="#38bdf8" opacity="0.08" filter="url(#softAura)" />
+  <circle cx="1000" cy="220" r="140" fill="#c084fc" opacity="0.08" filter="url(#softAura)" />
+  <circle cx="600" cy="160" r="100" fill="#f43f5e" opacity="0.06" filter="url(#softAura)" />
+
+  <!-- Top Pill Badge -->
+  <g transform="translate(600, 48)">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="-118" cy="0" r="5" fill="#10b981" />
+    <text x="-105" y="4" fill="#38bdf8" class="hero-tag" font-size="11">THE SYSTEMATIC MENTAL MODEL</text>
+  </g>
+
+  <!-- Main Hero Title -->
+  <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#heroTitleGrad)" filter="url(#heroGlow)">DSA LOGIC BUILDING PLAYBOOK</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#cbd5e1">
+    Test Case Dekh Kar Pattern Pakdo • Brute Force Se Optimal Tak Jao • Clean Java Me Likho
+  </text>
+  <text x="600" y="200" text-anchor="middle" class="hero-sub" font-size="13.5" fill="#94a3b8">
+    Zero Guesswork • 7-Step Framework • Thinking Ladder • 8 Complete Worked Examples
+  </text>
+
+  <!-- Bottom Floating Feature Chips -->
+  <g transform="translate(600, 256)">
+    <!-- Chip 1 -->
+    <g transform="translate(-360, 0)">
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#38bdf8" class="chip-text">⚡ 7-Step Framework</text>
+    </g>
+    <!-- Chip 2 -->
+    <g transform="translate(-120, 0)">
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#818cf8" class="chip-text">🪜 Thinking Ladder</text>
+    </g>
+    <!-- Chip 3 -->
+    <g transform="translate(120, 0)">
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#10b981" class="chip-text">🧰 Waste ➔ Tool Rx</text>
+    </g>
+    <!-- Chip 4 -->
+    <g transform="translate(360, 0)">
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#f472b6" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#f472b6" class="chip-text">☕ 100% Java Ready</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="220" fill="none">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Glowing Arrow Gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .step-num { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.5px; }
+    .step-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13.5px; fill: #f8fafc; }
+    .step-desc { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 11px; fill: #94a3b8; }
+    .time-badge { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 10.5px; fill: #f59e0b; }
+  </style>
+
+  <!-- Base Container -->
+  <rect x="2" y="2" width="1196" height="216" rx="18" fill="url(#pipeBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Flow Connector Bar Behind Steps -->
+  <line x1="85" y1="110" x2="1115" y2="110" stroke="#334155" stroke-width="4" stroke-dasharray="6 6" />
+  <line x1="85" y1="110" x2="1115" y2="110" stroke="url(#arrowGrad)" stroke-width="2" opacity="0.8" />
+
+  <!-- STEP 1 -->
+  <g transform="translate(25, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#38bdf8" stroke-width="1.8" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#38bdf8" class="step-num">STEP 1</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">🗣️</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Rephrase</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Apne words me</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+  </g>
+
+  <!-- STEP 2 -->
+  <g transform="translate(191, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#38bdf8" stroke-width="1.8" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#38bdf8" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#38bdf8" class="step-num">STEP 2</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">📋</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">I/O Bounds</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Constraints &amp; type</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+  </g>
+
+  <!-- STEP 3 -->
+  <g transform="translate(357, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#10b981" stroke-width="2" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#10b981" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#10b981" class="step-num">STEP 3</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">✍️</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Haath Se Solve</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Pen-paper dry run</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 3 MIN</text>
+  </g>
+
+  <!-- STEP 4 -->
+  <g transform="translate(523, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#f59e0b" stroke-width="1.8" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#f59e0b" class="step-num">STEP 4</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">🔨</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Brute Force</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Base complexity</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 2 MIN</text>
+  </g>
+
+  <!-- STEP 5 -->
+  <g transform="translate(689, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#f59e0b" stroke-width="1.8" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#f59e0b" class="step-num">STEP 5</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">🎯</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Target Fix</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">O(n) ya O(n log n)</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+  </g>
+
+  <!-- STEP 6 -->
+  <g transform="translate(855, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#a855f7" stroke-width="2" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#a855f7" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#a855f7" class="step-num">STEP 6</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">⚡</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Pattern Match</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Waste hatao (Tool)</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 3 MIN</text>
+  </g>
+
+  <!-- STEP 7 -->
+  <g transform="translate(1021, 40)">
+    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#ec4899" stroke-width="2.2" />
+    <rect x="10" y="10" width="56" height="18" rx="9" fill="#ec4899" fill-opacity="0.2" />
+    <text x="38" y="23" text-anchor="middle" fill="#ec4899" class="step-num">STEP 7</text>
+    <text x="74" y="52" text-anchor="middle" font-size="22">💻</text>
+    <text x="74" y="76" text-anchor="middle" class="step-title">Code &amp; Edge</text>
+    <text x="74" y="94" text-anchor="middle" class="step-desc">Safe &amp; Accepted</text>
+    <rect x="36" y="108" width="76" height="20" rx="10" fill="#10b981" fill-opacity="0.15" />
+    <text x="74" y="122" text-anchor="middle" fill="#10b981" class="time-badge">⏱️ 5 MIN</text>
+  </g>
+
+</svg>
