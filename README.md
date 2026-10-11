@@ -28,7 +28,9 @@
 
 </div>
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -48,7 +50,7 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 
 <br/>
 
----
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -83,7 +85,7 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 
 <br/>
 
----
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -103,7 +105,9 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -146,7 +150,9 @@ flowchart LR
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -181,7 +187,9 @@ Output ka structure hi aksar data structure reveal kar deta hai:
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -262,7 +270,9 @@ Sirf question ke diye test case pe rely mat karo. Khud banao:
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -292,7 +302,9 @@ Brute force likhne ya sochne ke baad **ek hi sawal poochho:**
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -326,7 +338,9 @@ Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni f
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -360,7 +374,9 @@ Problem statement ke words me hi solution ka hint chhupa hota hai:
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -585,7 +601,9 @@ for (int x : arr) {
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -650,7 +668,9 @@ graph TD
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -660,8 +680,6 @@ graph TD
 Har example me wahi **Thinking Ladder** framework lagaya gaya hai: test case observation se shuru, clean Java code pe khatam.
 
 <br/>
-
----
 
 <a id="101-product-of-array-except-self"></a>
 ### 10.1 📦 Product of Array Except Self
@@ -728,7 +746,9 @@ public int[] productExceptSelf(int[] nums) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="102-subarray-sum-equals-k"></a>
 ### 10.2 ➕ Subarray Sum Equals K
@@ -785,7 +805,9 @@ public int subarraySum(int[] nums, int k) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="103-container-with-most-water"></a>
 ### 10.3 🌊 Container With Most Water
@@ -849,7 +871,9 @@ public int maxArea(int[] h) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="104-merge-intervals"></a>
 ### 10.4 📏 Merge Intervals
@@ -901,7 +925,9 @@ public int[][] merge(int[][] intervals) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="105-koko-eating-bananas"></a>
 ### 10.5 🍌 Koko Eating Bananas (Binary Search on Answer)
@@ -973,7 +999,9 @@ private long hours(int[] piles, int k) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="106-coin-change"></a>
 ### 10.6 🪙 Coin Change (DP Kaise Banta Hai)
@@ -1051,7 +1079,9 @@ public int coinChange(int[] coins, int amount) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="107-number-of-islands"></a>
 ### 10.7 🏝️ Number of Islands (Grid + DFS)
@@ -1118,7 +1148,9 @@ private void dfs(char[][] g, int r, int c) {
 
 <br/>
 
----
+<img src="./assets/separator-accent.svg" width="100%" alt="---" />
+
+<br/>
 
 <a id="108-subsets"></a>
 ### 10.8 🌿 Subsets (Backtracking)
@@ -1187,7 +1219,9 @@ private void go(int[] nums, int start, List<Integer> path, List<List<Integer>> r
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1236,7 +1270,9 @@ Har tough problem solve karte waqt ye 7 sentences complete karo:
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1259,7 +1295,9 @@ Final code submit karne se pehle ye 9 checks zaroor verify karo:
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1284,7 +1322,9 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1347,7 +1387,9 @@ Heap (PriorityQueue)     ──►  Greedy Algorithms  ──►  Dynamic Progra
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1383,7 +1425,9 @@ Heap (PriorityQueue)     ──►  Greedy Algorithms  ──►  Dynamic Progra
 
 [⬆ Back to Top](#table-of-contents)
 
----
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1407,6 +1451,10 @@ Is open-source guide ko aur behtar banane ke liye community contributions welcom
 > * Tree aur Graph patterns ke dedicated worked examples
 > * Trie aur Disjoint Set Union (DSU) templates
 > * Dark/Light mode diagram assets
+
+<br/>
+
+<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
