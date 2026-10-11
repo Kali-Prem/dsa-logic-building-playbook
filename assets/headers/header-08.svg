@@ -13,13 +13,34 @@
       <stop offset="100%" stop-color="#050814" />
     </linearGradient>
 
-    <!-- Badge Background Gradient -->
-    <linearGradient id="badgeBg_header_08" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.1" />
+    <!-- PREMIUM RED BADGE BACKGROUND -->
+    <linearGradient id="redBadgeBg_header_08" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.24" />
+      <stop offset="50%" stop-color="#dc2626" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#991b1b" stop-opacity="0.05" />
     </linearGradient>
 
-    <!-- Soft Glow Filter -->
+    <!-- RADIANT RED BORDER GRADIENT -->
+    <linearGradient id="redBorder_header_08" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d6d" />
+      <stop offset="50%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+
+    <!-- BEST RED NUMBER TEXT GRADIENT -->
+    <linearGradient id="redNumGrad_header_08" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#ff4d6d" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+
+    <!-- RED GLOW FILTER -->
+    <filter id="redGlow_header_08" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Left Accent Bar Soft Glow Filter -->
     <filter id="hGlow_header_08" x="-20%" y="-30%" width="140%" height="160%">
       <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
@@ -30,7 +51,8 @@
     .topic-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11.5px; letter-spacing: 1.5px; fill: #6366f1; }
     .topic-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 27px; fill: #ffffff; letter-spacing: -0.4px; }
     .topic-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 13.5px; fill: #94a3b8; }
-    .topic-num { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 13px; fill: #6366f1; letter-spacing: 0.5px; }
+    .topic-num-2digit { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 42px; fill: url(#redNumGrad_header_08); letter-spacing: -1px; }
+    .topic-num-word { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 20px; fill: url(#redNumGrad_header_08); letter-spacing: 1px; }
   </style>
 
   <!-- Container Base with High-Contrast Dark Slate Background -->
@@ -39,18 +61,21 @@
   <!-- Glowing Left Vertical Accent Bar -->
   <rect x="2" y="14" width="6" height="97" rx="3" fill="url(#hGrad_header_08)" filter="url(#hGlow_header_08)" />
 
-  <!-- Left Icon & Number Square Badge -->
+  <!-- Left Full Box Red Number Badge -->
   <g transform="translate(24, 23)">
-    <rect width="78" height="78" rx="16" fill="url(#badgeBg_header_08)" stroke="url(#hGrad_header_08)" stroke-width="1.8" />
-    <!-- Emoji Icon -->
-    <text x="39" y="44" text-anchor="middle" font-size="30">🧱</text>
-    <!-- Step Number / Tag Pill -->
-    <rect x="14" y="54" width="50" height="18" rx="9" fill="#0f172a" stroke="url(#hGrad_header_08)" stroke-width="1.2" />
-    <text x="39" y="67" text-anchor="middle" class="topic-num">08</text>
+    <!-- Ambient Glow Shadow Box -->
+    <rect width="80" height="78" rx="16" fill="url(#redBadgeBg_header_08)" stroke="url(#redBorder_header_08)" stroke-width="2" filter="url(#redGlow_header_08)" opacity="0.6" />
+    <!-- Sharp Front Box -->
+    <rect width="80" height="78" rx="16" fill="url(#redBadgeBg_header_08)" stroke="url(#redBorder_header_08)" stroke-width="2" />
+    
+    <!-- Red Glow Layer for Text -->
+    <text x="40" y="54" text-anchor="middle" class="topic-num-2digit" fill="#ff1744" filter="url(#redGlow_header_08)" opacity="0.7">08</text>
+    <!-- Sharp Bold Red Number Filling the Full Box -->
+    <text x="40" y="54" text-anchor="middle" class="topic-num-2digit">08</text>
   </g>
 
   <!-- Content Stack (Middle to Right) -->
-  <g transform="translate(118, 20)">
+  <g transform="translate(124, 20)">
     <!-- Small Category Pill / Tagline -->
     <text x="0" y="20" class="topic-tag">SECTION 08 • TEMPLATES</text>
 
@@ -61,9 +86,9 @@
     <text x="0" y="80" class="topic-sub">11 Essential Algorithmic Patterns With Production-Ready Code</text>
   </g>
 
-  <!-- Right Decorative Gradient Nodes -->
+  <!-- Right Decorative Nodes -->
   <g transform="translate(885, 62)">
-    <circle cx="0" cy="0" r="16" fill="url(#badgeBg_header_08)" stroke="url(#hGrad_header_08)" stroke-width="1.2" />
-    <circle cx="0" cy="0" r="4.5" fill="#6366f1" />
+    <circle cx="0" cy="0" r="16" fill="url(#redBadgeBg_header_08)" stroke="url(#redBorder_header_08)" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="4.5" fill="#ef4444" />
   </g>
 </svg>
