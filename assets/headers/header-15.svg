@@ -75,15 +75,15 @@
   </g>
 
   <!-- Content Stack (Middle to Right) -->
-  <g transform="translate(124, 20)">
+  <g transform="translate(490, 20)">
     <!-- Small Category Pill / Tagline -->
-    <text x="0" y="20" class="topic-tag">SECTION 15 • CHEAT SHEET</text>
+    <text x="0" y="20" text-anchor="middle" class="topic-tag">SECTION 15 • CHEAT SHEET</text>
 
     <!-- Prominent Big Bold Title -->
-    <text x="0" y="54" class="topic-title">One Page Quick Revision</text>
+    <text x="0" y="54" text-anchor="middle" class="topic-title">One Page Quick Revision</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">10 Essential Diagnostic Questions &amp; 5 Core Problem Solving Mantras</text>
+    <text x="0" y="80" text-anchor="middle" class="topic-sub">10 Essential Diagnostic Questions &amp; 5 Core Problem Solving Mantras</text>
   </g>
 
   <!-- Right Decorative Nodes -->

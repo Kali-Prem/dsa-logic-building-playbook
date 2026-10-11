@@ -10,10 +10,6 @@
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="ye-repo-kis-liye-hai"></a>
 <div align="center">
   <img src="./assets/headers/header-about.svg" width="100%" alt="Ye Repo Kis Liye Hai" />
@@ -28,12 +24,11 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 * 💻 **8 complete worked examples** — Test case se le kar line-by-line Java code tak poora step-by-step breakdown.
 
 > [!NOTE]
-> **👥 Kiske liye:** DSA beginners, interview preparation, college students, aur competitive programming shuru karne wale sabhi developers.  
-> 📥 **Offline Resources:** [Download PDF Part 1](./DSA_Logic_Playbook-01.pdf) &nbsp;•&nbsp; [Download Java PDF Part 2](./DSA_Logic_Playbook_Java-final-02.pdf)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
+> **👥 Ye Guide Kiske Liye Hai?**
+> * 🎯 **DSA Beginners:** Jo code ratne ke bajay logic building aur step-by-step thinking sikhna chahte hain.
+> * 💼 **Interview Aspirants:** Jo tech coding interviews me unseen problems pe structured approach lagana chahte hain.
+> * 🎓 **College Students:** Jo campus placements aur semester exams ke liye strong conceptual foundation chahte hain.
+> * ⚡ **Problem Solvers:** Jo brute force se optimal complexity tak jana systematically samajhna chahte hain.
 
 <br/>
 
@@ -68,10 +63,6 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="1-golden-rules"></a>
 <div align="center">
   <img src="./assets/headers/header-01.svg" width="100%" alt="01. Golden Rules" />
@@ -89,10 +80,6 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -122,10 +109,6 @@ Har problem pe ye structured sequence follow karo:
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -161,10 +144,6 @@ Output ka structure hi aksar data structure reveal kar deta hai:
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -249,10 +228,6 @@ Sirf question ke diye test case pe rely mat karo. Khud banao:
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="5-brute-force-hamesha-pehle"></a>
 <div align="center">
   <img src="./assets/headers/header-05.svg" width="100%" alt="05. Brute Force Hamesha Pehle" />
@@ -280,10 +255,6 @@ Brute force likhne ya sochne ke baad **ek hi sawal poochho:**
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -321,10 +292,6 @@ Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni f
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="7-keyword-se-technique-pehchano"></a>
 <div align="center">
   <img src="./assets/headers/header-07.svg" width="100%" alt="07. Keyword Se Technique Pehchano" />
@@ -359,14 +326,25 @@ Problem statement ke words me hi solution ka hint chhupa hota hai:
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="8-core-patterns-with-java-templates"></a>
 <div align="center">
   <img src="./assets/headers/header-08.svg" width="100%" alt="08. Core Patterns With Java Templates" />
 </div>
+
+<br/>
+
+> 💡 **Jump Directly to Any Pattern:**  
+> [↔️ 8.1 Two Pointers](#81-two-pointers) &nbsp;•&nbsp; 
+> [🪟 8.2 Sliding Window](#82-sliding-window) &nbsp;•&nbsp; 
+> [➕ 8.3 Prefix Sum](#83-prefix-sum) &nbsp;•&nbsp; 
+> [🗂️ 8.4 HashMap](#84-hashmap) &nbsp;•&nbsp; 
+> [🎯 8.5 Binary Search](#85-binary-search) &nbsp;•&nbsp; 
+> [🥞 8.6 Stack](#86-stack) &nbsp;•&nbsp; 
+> [🔄 8.7 Backtracking](#87-recursion-and-backtracking) &nbsp;•&nbsp; 
+> [📊 8.8 Dynamic Programming](#88-dynamic-programming-dp) &nbsp;•&nbsp; 
+> [🌐 8.9 BFS & DFS](#89-bfs-and-dfs) &nbsp;•&nbsp; 
+> [🦅 8.10 Greedy](#810-greedy) &nbsp;•&nbsp; 
+> [🏔️ 8.11 Heap](#811-heap-priorityqueue)
 
 <br/>
 
@@ -588,10 +566,6 @@ for (int x : arr) {
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="9-thinking-ladder"></a>
 <div align="center">
   <img src="./assets/headers/header-09.svg" width="100%" alt="09. Thinking Ladder" />
@@ -692,16 +666,27 @@ Har DSA problem pe ye **8 seedhiyan (steps)** sequentially chadhna hai. Seedha c
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="10-worked-examples-step-by-step"></a>
 <div align="center">
   <img src="./assets/headers/header-10.svg" width="100%" alt="10. Worked Examples Step by Step" />
 </div>
 
 Har example me wahi **Thinking Ladder** framework lagaya gaya hai: test case observation se shuru, clean Java code pe khatam.
+
+<br/>
+
+### 📋 Quick Index of Worked Examples
+
+| # | Problem | Core Pattern | Target Time | Target Space | Direct Jump |
+| :---: | :--- | :--- | :---: | :---: | :---: |
+| **10.1** | [Product of Array Except Self](#101-product-of-array-except-self) | `Prefix & Suffix Product` | `O(n)` | `O(1)` | [View Solution ➔](#101-product-of-array-except-self) |
+| **10.2** | [Subarray Sum Equals K](#102-subarray-sum-equals-k) | `Prefix Sum + HashMap` | `O(n)` | `O(n)` | [View Solution ➔](#102-subarray-sum-equals-k) |
+| **10.3** | [Container With Most Water](#103-container-with-most-water) | `Two Pointers (Greedy Choice)` | `O(n)` | `O(1)` | [View Solution ➔](#103-container-with-most-water) |
+| **10.4** | [Merge Intervals](#104-merge-intervals) | `Sorting by Start + Greedy` | `O(n log n)` | `O(n)` | [View Solution ➔](#104-merge-intervals) |
+| **10.5** | [Koko Eating Bananas](#105-koko-eating-bananas) | `Binary Search on Answer` | `O(n log(max))` | `O(1)` | [View Solution ➔](#105-koko-eating-bananas) |
+| **10.6** | [Coin Change](#106-coin-change) | `Bottom-Up Dynamic Programming` | `O(amount × coins)` | `O(amount)` | [View Solution ➔](#106-coin-change) |
+| **10.7** | [Number of Islands](#107-number-of-islands) | `2D Grid DFS (In-place Sink)` | `O(R × C)` | `O(R × C)` | [View Solution ➔](#107-number-of-islands) |
+| **10.8** | [Subsets](#108-subsets) | `Backtracking (Decision Tree)` | `O(n × 2ⁿ)` | `O(n)` | [View Solution ➔](#108-subsets) |
 
 <br/>
 
@@ -1245,10 +1230,6 @@ private void go(int[] nums, int start, List<Integer> path, List<List<Integer>> r
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="11-test-case-padhne-ki-6-techniques"></a>
 <div align="center">
   <img src="./assets/headers/header-11.svg" width="100%" alt="11. Test Case Padhne Ki 6 Techniques" />
@@ -1298,10 +1279,6 @@ Har tough problem solve karte waqt ye 7 sentences complete karo:
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="12-edge-cases-checklist"></a>
 <div align="center">
   <img src="./assets/headers/header-12.svg" width="100%" alt="12. Edge Cases Checklist" />
@@ -1322,10 +1299,6 @@ Final code submit karne se pehle ye 9 checks zaroor verify karo:
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1351,10 +1324,6 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1414,10 +1383,6 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
-
-<br/>
-
 <a id="15-one-page-quick-revision"></a>
 <div align="center">
   <img src="./assets/headers/header-15.svg" width="100%" alt="15. One Page Quick Revision" />
@@ -1442,19 +1407,17 @@ Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist u
 
 ### 🧘‍♂️ 5 Core Mantras
 
-> 1. *"Pehle haath se paper pe, phir keyboard se IDE me."*
-> 2. *"Brute force &rarr; Bottleneck &rarr; Optimize."*
-> 3. *"Constraints batate hain technique."*
-> 4. *"Search slow hai? HashMap. Sorted hai? Binary Search ya Two Pointers."*
-> 5. *"Chhote input se pattern hamesha saaf dikhta hai."*
+> [!IMPORTANT]
+> ### 🧘‍♂️ 5 Core Problem Solving Mantras
+> 1. ✍️ **"Pehle haath se paper pe, phir keyboard se IDE me."** — *Jab tak paper pe logic clear na ho, keyboard mat chhuo.*
+> 2. ⚡ **"Brute force &rarr; Bottleneck &rarr; Optimize."** — *Pehle working baseline banao, phir waste dhoond ke tool lagao.*
+> 3. ⏱️ **"Constraints batate hain technique."** — *Input size `n` pehle hi target complexity fix kar deta hai.*
+> 4. 🧰 **"Search slow hai? HashMap. Sorted hai? Binary Search ya Two Pointers."** — *Bottleneck match karke tool uthao.*
+> 5. 🔬 **"Chhote input se pattern hamesha saaf dikhta hai."** — *2–3 elements pe dry run karne se rule turant unlock hota hai.*
 
 <br/>
 
 [⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
 
 <br/>
 
@@ -1483,7 +1446,11 @@ Is open-source guide ko aur behtar banane ke liye community contributions welcom
 
 <br/>
 
-<img src="./assets/separator-gradient.svg" width="100%" alt="---" />
+<div align="center">
+  <a href="https://github.com/Kali-Prem" target="_blank" rel="noopener noreferrer">
+    <img src="./assets/author-card.svg" width="100%" alt="Created by Prem - @Kali-Prem" />
+  </a>
+</div>
 
 <br/>
 
@@ -1496,8 +1463,9 @@ Is open-source guide ko aur behtar banane ke liye community contributions welcom
 ---
 
 <p align="center">
-  <b>Happy Coding & Keep Problem Solving! 🚀</b><br/>
-  <i>Logic pe focus karo, code khud-ba-khud ban jayega.</i>
+  <b>Happy Coding &amp; Keep Problem Solving! 🚀</b><br/>
+  <i>Logic pe focus karo, code khud-ba-khud ban jayega.</i><br/><br/>
+  Crafted with ❤️ by <b><a href="https://github.com/Kali-Prem">Prem (@Kali-Prem)</a></b>
 </p>
 
 </div>

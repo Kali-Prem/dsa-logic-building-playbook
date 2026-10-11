@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 125" width="100%" height="125" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="authBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" />
+      <stop offset="60%" stop-color="#0a101f" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Vibrant Gradient Accent -->
+    <linearGradient id="authGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4d6d" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Red-Cyan Badge Gradient -->
+    <linearGradient id="authBadgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d6d" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.10" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="authGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .auth-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1.5px; fill: #ff4d6d; }
+    .auth-name { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 23px; fill: #ffffff; letter-spacing: -0.4px; }
+    .auth-bio { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 13.5px; fill: #94a3b8; }
+    .auth-pill-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #38bdf8; letter-spacing: 0.3px; }
+    .auth-star-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f59e0b; }
+    .kp-monogram { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 28px; fill: url(#authGrad); letter-spacing: -0.5px; }
+  </style>
+
+  <!-- Container Base -->
+  <rect x="2" y="2" width="916" height="121" rx="16" fill="url(#authBg)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Glowing Left Accent Bar -->
+  <rect x="2" y="14" width="6" height="97" rx="3" fill="url(#authGrad)" filter="url(#authGlow)" />
+
+  <!-- Author Monogram Badge Box -->
+  <g transform="translate(24, 23)">
+    <rect width="78" height="78" rx="16" fill="url(#authBadgeBg)" stroke="url(#authGrad)" stroke-width="2" />
+    <!-- Monogram Initial -->
+    <text x="39" y="46" text-anchor="middle" class="kp-monogram">KP</text>
+    <!-- Tag Pill -->
+    <rect x="10" y="54" width="58" height="16" rx="8" fill="#0f172a" stroke="#ff4d6d" stroke-width="1" />
+    <text x="39" y="66" text-anchor="middle" font-size="9.5" font-weight="900" fill="#ff4d6d" letter-spacing="0.5px">AUTHOR</text>
+  </g>
+
+  <!-- Content Stack -->
+  <g transform="translate(122, 20)">
+    <!-- Category Tag -->
+    <text x="0" y="18" class="auth-tag">CREATOR • MAINTAINER</text>
+
+    <!-- Author Name & Handle -->
+    <text x="0" y="46" class="auth-name">Prem • <tspan fill="#38bdf8">@Kali-Prem</tspan></text>
+
+    <!-- Bio / Philosophy -->
+    <text x="0" y="72" class="auth-bio">Passionate about DSA logic building, intuition-first mental models &amp; clean code architectures</text>
+
+    <!-- Quick Links / Badges Pill -->
+    <g transform="translate(0, 81)">
+      <!-- GitHub Profile Pill -->
+      <g>
+        <rect width="170" height="20" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+        <text x="10" y="14" class="auth-pill-text">🐙 github.com/Kali-Prem</text>
+      </g>
+      <!-- Star Reminder Pill -->
+      <g transform="translate(180, 0)">
+        <rect width="240" height="20" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2" />
+        <text x="10" y="14" class="auth-star-text">⭐ Star the repo if this playbook helped you</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Decorative Node -->
+  <g transform="translate(885, 62)">
+    <circle cx="0" cy="0" r="16" fill="url(#authBadgeBg)" stroke="url(#authGrad)" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="5" fill="#38bdf8" />
+  </g>
+</svg>

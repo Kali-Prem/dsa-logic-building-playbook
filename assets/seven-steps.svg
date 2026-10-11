@@ -1,124 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="220" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 235" width="100%" height="235" fill="none">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#0f172a" />
       <stop offset="100%" stop-color="#020617" />
     </linearGradient>
 
-    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="100%" stop-color="#0f172a" />
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Glowing Arrow Gradient -->
-    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Flow Connector Gradient -->
+    <linearGradient id="pipeLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#a855f7" />
-      <stop offset="100%" stop-color="#10b981" />
+      <stop offset="30%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#f59e0b" />
+      <stop offset="85%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
     </linearGradient>
-
-    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <style>
-    .step-num { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.5px; }
-    .step-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13.5px; fill: #f8fafc; }
-    .step-desc { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 11px; fill: #94a3b8; }
-    .time-badge { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 10.5px; fill: #f59e0b; }
+    .step-pill-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 13px; letter-spacing: 0.5px; }
+    .card-title-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 18px; fill: #ffffff; letter-spacing: -0.3px; }
+    .card-title-compact { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 16.5px; fill: #ffffff; letter-spacing: -0.3px; }
+    .card-desc-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 14px; fill: #cbd5e1; }
+    .card-time-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13.5px; fill: #f59e0b; letter-spacing: 0.3px; }
+    .card-time-green { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 13.5px; fill: #10b981; letter-spacing: 0.3px; }
   </style>
 
-  <!-- Base Container -->
-  <rect x="2" y="2" width="1196" height="216" rx="18" fill="url(#pipeBg)" stroke="#334155" stroke-width="2" />
+  <!-- Container Base -->
+  <rect x="2" y="2" width="1176" height="231" rx="20" fill="url(#pipeBg)" stroke="#1e293b" stroke-width="2" />
 
-  <!-- Flow Connector Bar Behind Steps -->
-  <line x1="85" y1="110" x2="1115" y2="110" stroke="#334155" stroke-width="4" stroke-dasharray="6 6" />
-  <line x1="85" y1="110" x2="1115" y2="110" stroke="url(#arrowGrad)" stroke-width="2" opacity="0.8" />
+  <!-- Flow Connector Bar Behind Cards -->
+  <line x1="80" y1="115" x2="1100" y2="115" stroke="#334155" stroke-width="6" stroke-dasharray="8 8" />
+  <line x1="80" y1="115" x2="1100" y2="115" stroke="url(#pipeLineGrad)" stroke-width="3" opacity="0.85" />
 
-  <!-- STEP 1 -->
-  <g transform="translate(25, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#38bdf8" stroke-width="1.8" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#38bdf8" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#38bdf8" class="step-num">STEP 1</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">🗣️</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Rephrase</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Apne words me</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+  <!-- STEP 01 -->
+  <g transform="translate(20, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#38bdf8" class="step-pill-txt">STEP 01</text>
+
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-txt">Rephrase</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Apne words me</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 1 MIN</text>
   </g>
+  <!-- STEP 02 -->
+  <g transform="translate(184, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#0ea5e9" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#0ea5e9" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#0ea5e9" class="step-pill-txt">STEP 02</text>
 
-  <!-- STEP 2 -->
-  <g transform="translate(191, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#38bdf8" stroke-width="1.8" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#38bdf8" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#38bdf8" class="step-num">STEP 2</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">📋</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">I/O Bounds</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Constraints &amp; type</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-txt">I/O Bounds</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Constraints &amp; type</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 1 MIN</text>
   </g>
+  <!-- STEP 03 -->
+  <g transform="translate(348, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#10b981" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#10b981" class="step-pill-txt">STEP 03</text>
 
-  <!-- STEP 3 -->
-  <g transform="translate(357, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#10b981" stroke-width="2" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#10b981" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#10b981" class="step-num">STEP 3</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">✍️</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Haath Se Solve</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Pen-paper dry run</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 3 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-compact">Haath Se Solve</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Pen-paper dry run</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 3 MIN</text>
   </g>
+  <!-- STEP 04 -->
+  <g transform="translate(512, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#f59e0b" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#f59e0b" class="step-pill-txt">STEP 04</text>
 
-  <!-- STEP 4 -->
-  <g transform="translate(523, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#f59e0b" stroke-width="1.8" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#f59e0b" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#f59e0b" class="step-num">STEP 4</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">🔨</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Brute Force</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Base complexity</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 2 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-txt">Brute Force</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Base complexity</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 2 MIN</text>
   </g>
+  <!-- STEP 05 -->
+  <g transform="translate(676, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#eab308" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#eab308" fill-opacity="0.2" stroke="#eab308" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#eab308" class="step-pill-txt">STEP 05</text>
 
-  <!-- STEP 5 -->
-  <g transform="translate(689, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#f59e0b" stroke-width="1.8" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#f59e0b" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#f59e0b" class="step-num">STEP 5</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">🎯</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Target Fix</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">O(n) ya O(n log n)</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 1 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-txt">Target Fix</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Target complexity</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 1 MIN</text>
   </g>
+  <!-- STEP 06 -->
+  <g transform="translate(840, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#a855f7" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#a855f7" class="step-pill-txt">STEP 06</text>
 
-  <!-- STEP 6 -->
-  <g transform="translate(855, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#a855f7" stroke-width="2" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#a855f7" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#a855f7" class="step-num">STEP 6</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">⚡</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Pattern Match</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Waste hatao (Tool)</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" class="time-badge">⏱️ 3 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-compact">Pattern Match</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Waste hatao (Tool)</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-txt">&#9201; 3 MIN</text>
   </g>
+  <!-- STEP 07 -->
+  <g transform="translate(1004, 28)">
+    <!-- Card Frame -->
+    <rect width="152" height="175" rx="16" fill="url(#cardBg)" stroke="#ec4899" stroke-width="2" />
+    
+    <!-- Step Pill -->
+    <rect x="31" y="14" width="90" height="26" rx="13" fill="#ec4899" fill-opacity="0.2" stroke="#ec4899" stroke-width="1.4" />
+    <text x="76" y="31" text-anchor="middle" fill="#ec4899" class="step-pill-txt">STEP 07</text>
 
-  <!-- STEP 7 -->
-  <g transform="translate(1021, 40)">
-    <rect width="148" height="140" rx="12" fill="url(#stepGrad1)" stroke="#ec4899" stroke-width="2.2" />
-    <rect x="10" y="10" width="56" height="18" rx="9" fill="#ec4899" fill-opacity="0.2" />
-    <text x="38" y="23" text-anchor="middle" fill="#ec4899" class="step-num">STEP 7</text>
-    <text x="74" y="52" text-anchor="middle" font-size="22">💻</text>
-    <text x="74" y="76" text-anchor="middle" class="step-title">Code &amp; Edge</text>
-    <text x="74" y="94" text-anchor="middle" class="step-desc">Safe &amp; Accepted</text>
-    <rect x="36" y="108" width="76" height="20" rx="10" fill="#10b981" fill-opacity="0.15" />
-    <text x="74" y="122" text-anchor="middle" fill="#10b981" class="time-badge">⏱️ 5 MIN</text>
+    <!-- Main Title (Big & Bold) -->
+    <text x="76" y="72" text-anchor="middle" class="card-title-compact">Code &amp; Edge</text>
+
+    <!-- High-Contrast Subtitle -->
+    <text x="76" y="102" text-anchor="middle" class="card-desc-txt">Safe &amp; Accepted</text>
+
+    <!-- Prominent Time Badge -->
+    <rect x="31" y="128" width="90" height="28" rx="14" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1.4" />
+    <text x="76" y="146" text-anchor="middle" class="card-time-green">&#9201; 5 MIN</text>
   </g>
-
 </svg>

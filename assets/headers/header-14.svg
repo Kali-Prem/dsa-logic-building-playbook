@@ -75,15 +75,15 @@
   </g>
 
   <!-- Content Stack (Middle to Right) -->
-  <g transform="translate(124, 20)">
+  <g transform="translate(490, 20)">
     <!-- Small Category Pill / Tagline -->
-    <text x="0" y="20" class="topic-tag">SECTION 14 • ROADMAP</text>
+    <text x="0" y="20" text-anchor="middle" class="topic-tag">SECTION 14 • ROADMAP</text>
 
     <!-- Prominent Big Bold Title -->
-    <text x="0" y="54" class="topic-title">Practice Plan &amp; Roadmap</text>
+    <text x="0" y="54" text-anchor="middle" class="topic-title">Practice Plan &amp; Roadmap</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">High-Retention Spaced Repetition &amp; Curated Problem Progression</text>
+    <text x="0" y="80" text-anchor="middle" class="topic-sub">High-Retention Spaced Repetition &amp; Curated Problem Progression</text>
   </g>
 
   <!-- Right Decorative Nodes -->

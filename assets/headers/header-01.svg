@@ -75,15 +75,15 @@
   </g>
 
   <!-- Content Stack (Middle to Right) -->
-  <g transform="translate(124, 20)">
+  <g transform="translate(490, 20)">
     <!-- Small Category Pill / Tagline -->
-    <text x="0" y="20" class="topic-tag">SECTION 01 • PRINCIPLES</text>
+    <text x="0" y="20" text-anchor="middle" class="topic-tag">SECTION 01 • PRINCIPLES</text>
 
     <!-- Prominent Big Bold Title -->
-    <text x="0" y="54" class="topic-title">Golden Rules</text>
+    <text x="0" y="54" text-anchor="middle" class="topic-title">Golden Rules</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">5 Non-Negotiable Mental Principles Before Touching Code</text>
+    <text x="0" y="80" text-anchor="middle" class="topic-sub">5 Non-Negotiable Mental Principles Before Touching Code</text>
   </g>
 
   <!-- Right Decorative Nodes -->
