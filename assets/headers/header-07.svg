@@ -2,8 +2,8 @@
   <defs>
     <!-- Dynamic Accent Gradient -->
     <linearGradient id="hGrad_header_07" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a855f7" />
-      <stop offset="100%" stop-color="#8b5cf6" />
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ef4444" />
     </linearGradient>
 
     <!-- Card Background Gradient -->
@@ -48,7 +48,7 @@
   </defs>
 
   <style>
-    .topic-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11.5px; letter-spacing: 1.5px; fill: #a855f7; }
+    .topic-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11.5px; letter-spacing: 1.5px; fill: #f97316; }
     .topic-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 27px; fill: #ffffff; letter-spacing: -0.4px; }
     .topic-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 13.5px; fill: #94a3b8; }
     .topic-num-2digit { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 42px; fill: url(#redNumGrad_header_07); letter-spacing: -1px; }
@@ -69,7 +69,7 @@
     <rect width="80" height="78" rx="16" fill="url(#redBadgeBg_header_07)" stroke="url(#redBorder_header_07)" stroke-width="2" />
     
     <!-- Red Glow Layer for Text -->
-    <text x="40" y="54" text-anchor="middle" class="topic-num-2digit" fill="#ff1744" filter="url(#redGlow_header_07)" opacity="0.7">07</text>
+    <text x="40" y="54" text-anchor="middle" class="topic-num-2digit" fill="#ff1744" filter="url(#redGlow_header_07)" opacity="0.7">06</text>
     <!-- Sharp Bold Red Number Filling the Full Box -->
     <text x="40" y="54" text-anchor="middle" class="topic-num-2digit">07</text>
   </g>
@@ -77,13 +77,13 @@
   <!-- Content Stack (Middle to Right) -->
   <g transform="translate(490, 20)">
     <!-- Small Category Pill / Tagline -->
-    <text x="0" y="20" text-anchor="middle" class="topic-tag">SECTION 07 • SIGNALS</text>
+    <text x="0" y="20" text-anchor="middle" class="topic-tag">SECTION 07 • BIG-O ANALYSIS</text>
 
     <!-- Prominent Big Bold Title -->
-    <text x="0" y="54" text-anchor="middle" class="topic-title">Keyword Se Technique Pehchano</text>
+    <text x="0" y="54" text-anchor="middle" class="topic-title">Constraints Se Complexity Pehchano</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" text-anchor="middle" class="topic-sub">18 Direct Problem Statement Clues To Algorithmic Patterns</text>
+    <text x="0" y="80" text-anchor="middle" class="topic-sub">Input Size &#x27;n&#x27; vs Target Time &amp; Space Complexity Matrix</text>
   </g>
 
   <!-- Right Decorative Nodes -->

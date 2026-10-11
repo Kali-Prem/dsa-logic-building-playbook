@@ -46,15 +46,15 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 | **02** | [🪜 2. Seven Step Framework](#2-seven-step-framework) | Har problem solve karne ka 7-step blueprint |
 | **03** | [🔎 3. Problem Ko Samjho](#3-problem-ko-samjho) | 5 sawal + Output type se hint chart |
 | **04** | [🧪 4. Test Case Se Logic Kaise Nikale](#4-test-case-se-logic-kaise-nikale) | Human method + Kadane's algorithm derivation |
-| **05** | [🔨 5. Brute Force Hamesha Pehle](#5-brute-force-hamesha-pehle) | Safety net build karna & waste dhoondna |
-| **06** | [⏱️ 6. Constraints Se Complexity Pehchano](#6-constraints-se-complexity-pehchano) | `n` ka size vs Allowed time complexity |
-| **07** | [🔑 7. Keyword Se Technique Pehchano](#7-keyword-se-technique-pehchano) | 18 direct problem keywords to patterns cheat-table |
-| **08** | [🧱 8. Core Patterns With Java Templates](#8-core-patterns-with-java-templates) | Two Pointers, Sliding Window, DP, Graphs & more |
-| **09** | [🪜 9. Thinking Ladder](#9-thinking-ladder) | 8-step mental ladder + Waste to Tool matching chart |
-| **10** | [💡 10. Worked Examples Step by Step](#10-worked-examples-step-by-step) | 8 deep-dive problems completely solved |
-| **11** | [🔬 11. Test Case Padhne Ki 6 Techniques](#11-test-case-padhne-ki-6-techniques) | 6 angles to read test cases + 7 fill-in blanks |
-| **12** | [✅ 12. Edge Cases Checklist](#12-edge-cases-checklist) | Code likhne se pehle 9 critical checks |
-| **13** | [🆘 13. Jab Atak Jao To Kya Karo](#13-jab-atak-jao-to-kya-karo) | Debugging mental blocks in real time |
+| **05** | [🔬 5. Test Case Padhne Ki 6 Techniques](#5-test-case-padhne-ki-6-techniques) | 6 angles to read test cases + 7 fill-in blanks |
+| **06** | [🔨 6. Brute Force Hamesha Pehle](#6-brute-force-hamesha-pehle) | Safety net build karna & waste dhoondna |
+| **07** | [⏱️ 7. Constraints Se Complexity Pehchano](#7-constraints-se-complexity-pehchano) | `n` ka size vs Allowed time complexity |
+| **08** | [🔑 8. Keyword Se Technique Pehchano](#8-keyword-se-technique-pehchano) | 18 direct problem keywords to patterns cheat-table |
+| **09** | [🧱 9. Core Patterns With Java Templates](#9-core-patterns-with-java-templates) | Two Pointers, Sliding Window, DP, Graphs & more |
+| **10** | [🪜 10. Thinking Ladder](#10-thinking-ladder) | 8-step mental ladder + Waste to Tool matching chart |
+| **11** | [✅ 11. Edge Cases Checklist](#11-edge-cases-checklist) | Code likhne se pehle 9 critical checks |
+| **12** | [🆘 12. Jab Atak Jao To Kya Karo](#12-jab-atak-jao-to-kya-karo) | Debugging mental blocks in real time |
+| **13** | [💡 13. Worked Examples Step by Step](#13-worked-examples-step-by-step) | 8 deep-dive problems completely solved |
 | **14** | [📅 14. Practice Plan](#14-practice-plan) | Pattern-based structured roadmap |
 | **15** | [⚡ 15. One Page Quick Revision](#15-one-page-quick-revision) | 10 sawal + 5 fundamental mantras |
 | **16** | [🤝 16. Contributing](#16-contributing) | How to help improve this open-source playbook |
@@ -228,9 +228,58 @@ Sirf question ke diye test case pe rely mat karo. Khud banao:
 
 <br/>
 
-<a id="5-brute-force-hamesha-pehle"></a>
+<a id="5-test-case-padhne-ki-6-techniques"></a>
 <div align="center">
-  <img src="./assets/headers/header-05.svg" width="100%" alt="05. Brute Force Hamesha Pehle" />
+  <img src="./assets/headers/header-05.svg" width="100%" alt="05. Test Case Padhne Ki 6 Techniques" />
+</div>
+
+Jab logic bilkul na soojh raha ho, sample test case ko in **6 nazron** se dekho:
+
+| # | Technique | Kya Karna Hai | Kab Kaam Aati Hai |
+| :---: | :--- | :--- | :--- |
+| **1** | 📏 **Size Check** | Input aur output ka size ratio compare karo (`n &rarr; n`, `n &rarr; 1`, `n &rarr; 2ⁿ`) | `n &rarr; 2ⁿ` = Subsets, `n &rarr; n!` = Permutations, `n &rarr; 1` = DP/Greedy/Reduce |
+| **2** | 🔄 **Kya Badla, Kya Same** | Kaunse elements apni jagah pe hain aur kaunse shift hue? | Array Partition, In-place sorting, Array Rotation |
+| **3** | 🪜 **Chhota Bana Ke Dekho** | `n = 1, 2, 3, 4` ke answers paper pe manually likho | Recurrence relation, DP base cases, Math sequences |
+| **4** | ⏪ **Ulta Chalo** | Final output se input ki taraf reverse calculate karo | Binary Search on Answer, Prefix Sum + Map lookups |
+| **5** | ⚠️ **Extreme Cases** | Sab numbers identical, already sorted, negatives, extreme bounds | Greedy assumptions test karna, Edge bug discovery |
+| **6** | 🥊 **Counter-Example Banao** | Khud ek aisa input design karo jo tumhare sochi hui trick ko break kare | Greedy confirm ya reject karne ke liye |
+
+<br/>
+
+> [!NOTE]
+> **Example (Technique 3 In Action):**  
+> Maan lo tumne dekha: `n=1 &rarr; 1`, `n=2 &rarr; 2`, `n=3 &rarr; 3`, `n=4 &rarr; 5`, `n=5 &rarr; 8`.  
+> Sequence bana: `1, 2, 3, 5, 8` &rarr; Har number pichhle do ka sum hai!  
+> Bina kisi formula ko soche Fibonacci recurrence mil gayi!
+
+<br/>
+
+### 📝 Fill-in-the-Blank Template
+
+Har tough problem solve karte waqt ye 7 sentences complete karo:
+
+```text
+1. "Input ____________ hai aur output ____________ chahiye."
+2. "Haath se paper pe karte waqt maine ____________ kaam baar-baar kiya, aur ____________ yaad rakha."
+3. "Brute force solution ____________ hai (complexity ____________), par constraints ____________ hain, isliye ye TLE dega/chalega."
+4. "Brute force me ____________ computation baar-baar repeat ho raha hai (waste)."
+5. "Is waste ko hatane ke liye main ____________ (tool / data structure) use kar sakta hoon."
+6. "Ye tool 100% kaam karega kyunki ____________."
+7. "Edge cases jo handle karne hain: ____________, ____________, ____________."
+```
+
+> [!TIP]
+> Agar ye 7 sentences complete fill ho gaye, to ab tumhara logic ban chuka hai — **ab bas syntax likhna bacha hai!**
+
+<br/>
+
+[⬆ Back to Top](#table-of-contents)
+
+<br/>
+
+<a id="6-brute-force-hamesha-pehle"></a>
+<div align="center">
+  <img src="./assets/headers/header-06.svg" width="100%" alt="06. Brute Force Hamesha Pehle" />
 </div>
 
 Brute force ek **safety net** hai. Ye prove karta hai ki tumhe problem 100% samajh aa chuki hai.
@@ -258,9 +307,9 @@ Brute force likhne ya sochne ke baad **ek hi sawal poochho:**
 
 <br/>
 
-<a id="6-constraints-se-complexity-pehchano"></a>
+<a id="7-constraints-se-complexity-pehchano"></a>
 <div align="center">
-  <img src="./assets/headers/header-06.svg" width="100%" alt="06. Constraints Se Complexity Pehchano" />
+  <img src="./assets/headers/header-07.svg" width="100%" alt="07. Constraints Se Complexity Pehchano" />
 </div>
 
 Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni fast solution chahiye:
@@ -292,9 +341,9 @@ Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni f
 
 <br/>
 
-<a id="7-keyword-se-technique-pehchano"></a>
+<a id="8-keyword-se-technique-pehchano"></a>
 <div align="center">
-  <img src="./assets/headers/header-07.svg" width="100%" alt="07. Keyword Se Technique Pehchano" />
+  <img src="./assets/headers/header-08.svg" width="100%" alt="08. Keyword Se Technique Pehchano" />
 </div>
 
 Problem statement ke words me hi solution ka hint chhupa hota hai:
@@ -326,29 +375,29 @@ Problem statement ke words me hi solution ka hint chhupa hota hai:
 
 <br/>
 
-<a id="8-core-patterns-with-java-templates"></a>
+<a id="9-core-patterns-with-java-templates"></a>
 <div align="center">
-  <img src="./assets/headers/header-08.svg" width="100%" alt="08. Core Patterns With Java Templates" />
+  <img src="./assets/headers/header-09.svg" width="100%" alt="09. Core Patterns With Java Templates" />
 </div>
 
 <br/>
 
 > 💡 **Jump Directly to Any Pattern:**  
-> [↔️ 8.1 Two Pointers](#81-two-pointers) &nbsp;•&nbsp; 
-> [🪟 8.2 Sliding Window](#82-sliding-window) &nbsp;•&nbsp; 
-> [➕ 8.3 Prefix Sum](#83-prefix-sum) &nbsp;•&nbsp; 
-> [🗂️ 8.4 HashMap](#84-hashmap) &nbsp;•&nbsp; 
-> [🎯 8.5 Binary Search](#85-binary-search) &nbsp;•&nbsp; 
-> [🥞 8.6 Stack](#86-stack) &nbsp;•&nbsp; 
-> [🔄 8.7 Backtracking](#87-recursion-and-backtracking) &nbsp;•&nbsp; 
-> [📊 8.8 Dynamic Programming](#88-dynamic-programming-dp) &nbsp;•&nbsp; 
-> [🌐 8.9 BFS & DFS](#89-bfs-and-dfs) &nbsp;•&nbsp; 
-> [🦅 8.10 Greedy](#810-greedy) &nbsp;•&nbsp; 
-> [🏔️ 8.11 Heap](#811-heap-priorityqueue)
+> [↔️ 9.1 Two Pointers](#91-two-pointers) &nbsp;•&nbsp; 
+> [🪟 9.2 Sliding Window](#92-sliding-window) &nbsp;•&nbsp; 
+> [➕ 9.3 Prefix Sum](#93-prefix-sum) &nbsp;•&nbsp; 
+> [🗂️ 9.4 HashMap](#94-hashmap) &nbsp;•&nbsp; 
+> [🎯 9.5 Binary Search](#95-binary-search) &nbsp;•&nbsp; 
+> [🥞 9.6 Stack](#96-stack) &nbsp;•&nbsp; 
+> [🔄 9.7 Backtracking](#97-recursion-and-backtracking) &nbsp;•&nbsp; 
+> [📊 9.8 Dynamic Programming](#98-dynamic-programming-dp) &nbsp;•&nbsp; 
+> [🌐 9.9 BFS & DFS](#99-bfs-and-dfs) &nbsp;•&nbsp; 
+> [🦅 9.10 Greedy](#910-greedy) &nbsp;•&nbsp; 
+> [🏔️ 9.11 Heap](#911-heap-priorityqueue)
 
 <br/>
 
-### 8.1 ↔️ Two Pointers
+### 9.1 ↔️ Two Pointers
 
 * **💡 Core Idea:** Do pointers (`l`, `r`) ko opposite ends ya same direction se move karo, nested loops se bacho.
 * **🎯 Kab Lagayein:** Sorted array, pair sum, palindrome check, in-place array reverse.
@@ -370,7 +419,7 @@ while (l < r) {
 
 <br/>
 
-### 8.2 🪟 Sliding Window
+### 9.2 🪟 Sliding Window
 
 * **💡 Core Idea:** Ek dynamic window `[l, r]` maintain karo. Right pointer badhaye jao, jab condition violate ho to Left pointer se shrink karo.
 * **🎯 Kab Lagayein:** "Longest ya shortest contiguous subarray/substring jisme koi specific condition satisfy ho."
@@ -393,7 +442,7 @@ for (int r = 0; r < n; r++) {
 
 <br/>
 
-### 8.3 ➕ Prefix Sum
+### 9.3 ➕ Prefix Sum
 
 * **💡 Core Idea:** Array ka running cumulative sum pehle hi store kar lo, jisse kisi bhi range `[l, r]` ka sum `O(1)` me mil sake.
 
@@ -412,7 +461,7 @@ for (int i = 0; i < n; i++) {
 
 <br/>
 
-### 8.4 🗂️ HashMap
+### 9.4 🗂️ HashMap
 
 * **💡 Core Idea:** Expensive `O(n)` linear search ko `O(1)` lookup me badal do. "Pehle kaunsa element dekha tha" yaad rakho.
 
@@ -429,7 +478,7 @@ for (int i = 0; i < arr.length; i++) {
 
 <br/>
 
-### 8.5 🎯 Binary Search
+### 9.5 🎯 Binary Search
 
 * **💡 Core Idea:** Har step pe search space ko exactly aadha (`1/2`) kar do.
 * **🎯 Kab Lagayein:** Sorted data me target dhoondna, ya answer monotonic ho jisme `check(x)` yes/no return kare.
@@ -451,7 +500,7 @@ return -1;
 
 <br/>
 
-### 8.6 🥞 Stack
+### 9.6 🥞 Stack
 
 * **💡 Core Idea:** Last-In-First-Out (LIFO). Jo element sabse recent aaya hai, uski state sabse pehle resolve karni ho.
 * **🎯 Kab Lagayein:** Valid Parentheses matching, Next Greater Element, Daily Temperatures.
@@ -476,7 +525,7 @@ return stack.isEmpty();
 
 <br/>
 
-### 8.7 🔄 Recursion and Backtracking
+### 9.7 🔄 Recursion and Backtracking
 
 * **💡 Core Idea:** Choice lo, aage explore karo, agar galat rasta nikla to wapas aakar step undo karo.  
   **3 Mantras: Choose &rarr; Explore &rarr; Undo.**
@@ -498,7 +547,7 @@ void solve(List<Integer> path) {
 
 <br/>
 
-### 8.8 📊 Dynamic Programming (DP)
+### 9.8 📊 Dynamic Programming (DP)
 
 * **💡 Core Idea:** Bade problem ko chhote overlapping subproblems me todo, aur calculated results ko cache (memoize/table) kar lo taaki recalculation zero ho.
 * **🎯 DP Kaise Pehchano:** *"Count number of ways"*, *"Min / Max value"*, *"Is it possible?"* + Har element pe choice (Include karo ya Exclude karo).
@@ -516,7 +565,7 @@ void solve(List<Integer> path) {
 
 <br/>
 
-### 8.9 🌐 BFS and DFS
+### 9.9 🌐 BFS and DFS
 
 * **BFS (Breadth-First Search):** `Queue` use karta hai. Level-by-level traversal. Unweighted graphs me shortest path guarantee karta hai.
 * **DFS (Depth-First Search):** `Recursion` ya `Stack` use karta hai. Ek raaste pe ant tak jao, phir backtrack karo. Connected components, cycle detection, aur tree traversals ke liye best hai.
@@ -537,14 +586,14 @@ while (!q.isEmpty()) {
 
 <br/>
 
-### 8.10 🦅 Greedy
+### 9.10 🦅 Greedy
 
 * **💡 Core Idea:** Har individual step pe locally best/safest choice lo, bina aage ka soche. Ye tab kaam karta hai jab locally optimal choice hi global optimal solution banaye.
 * **🎯 Verification Check:** Aksar data ko sort karne ke baad lagta hai. Apne logic pe counter-example dhoondo; agar koi counter-example na mile, to greedy safe hai.
 
 <br/>
 
-### 8.11 🏔️ Heap (PriorityQueue)
+### 9.11 🏔️ Heap (PriorityQueue)
 
 * **💡 Core Idea:** Sabse chhota (Min-Heap) ya sabse bada (Max-Heap) element constant time `O(1)` me dekho aur `O(log n)` me extract karo.
 * **🎯 Pro Trick:** *"Top K largest elements"* ke liye hamesha **Min-Heap of size K** maintain karo!
@@ -566,9 +615,9 @@ for (int x : arr) {
 
 <br/>
 
-<a id="9-thinking-ladder"></a>
+<a id="10-thinking-ladder"></a>
 <div align="center">
-  <img src="./assets/headers/header-09.svg" width="100%" alt="09. Thinking Ladder" />
+  <img src="./assets/headers/header-10.svg" width="100%" alt="10. Thinking Ladder" />
 </div>
 
 Har DSA problem pe ye **8 seedhiyan (steps)** sequentially chadhna hai. Seedha code pe jump mat karo — is framework se kisi bhi tough problem ka logic 10 minute me unlock ho jata hai:
@@ -666,9 +715,57 @@ Har DSA problem pe ye **8 seedhiyan (steps)** sequentially chadhna hai. Seedha c
 
 <br/>
 
-<a id="10-worked-examples-step-by-step"></a>
+<a id="11-edge-cases-checklist"></a>
 <div align="center">
-  <img src="./assets/headers/header-10.svg" width="100%" alt="10. Worked Examples Step by Step" />
+  <img src="./assets/headers/header-11.svg" width="100%" alt="11. Edge Cases Checklist" />
+</div>
+
+Final code submit karne se pehle ye 9 checks zaroor verify karo:
+
+- [ ] 📭 **Empty input:** Empty array `[]` ya empty string `""` handle kiya?
+- [ ] 1️⃣ **Single element:** Array with single element `[5]` sahi output deta hai?
+- [ ] 👯 **Identical elements:** Sabhi elements same hon `[7, 7, 7, 7]` to logic break to nahi hota?
+- [ ] ➖ **Negative numbers aur Zero:** `0` aur negative integers test kiye? (e.g. subarray sum, product, division)
+- [ ] 🔁 **Duplicates:** Input me duplicate values aane se multiple counts ya false matches to nahi ban rahe?
+- [ ] 📶 **Already sorted ya Reverse sorted:** Pre-sorted array pe algorithm infinite loop ya worst-case me to nahi jata?
+- [ ] 💥 **Integer Overflow:** Calculations `long` me karni chahiye thi to nahi? (`lo + (hi - lo) / 2` use kiya?)
+- [ ] 🚫 **Index Out of Bounds:** Pointer checks `i + 1`, `i - 1`, `mid - 1` boundary pe safe hain?
+- [ ] ❓ **No Solution Exists:** Agar valid answer exist hi na kare to expected default return value kya hai (`-1`, `null`, `[]`)?
+
+<br/>
+
+[⬆ Back to Top](#table-of-contents)
+
+<br/>
+
+<a id="12-jab-atak-jao-to-kya-karo"></a>
+<div align="center">
+  <img src="./assets/headers/header-12.svg" width="100%" alt="12. Jab Atak Jao To Kya Karo" />
+</div>
+
+Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist use karo:
+
+| Situation / Problem | Immediate Action Plan |
+| :--- | :--- |
+| 🤯 **Kuch samajh nahi aa raha** | Sabse chhota input (2-3 elements) lo aur paper pe manually solve karo. |
+| 🧱 **Brute force bhi nahi soojh raha** | *"Saare combinations / possibilities explore karo"* socho, phir loops ya recursion me convert karo. |
+| 🐌 **Brute force hai par slow hai (TLE)** | Bottleneck identify karo: search slow hai, sorting baar-baar ho rahi hai, ya duplicate computation hai? |
+| ❓ **Pattern pehchan nahi aa raha** | [Section 8: Keyword Technique Table](#8-keyword-se-technique-pehchano) ka cheat-sheet dekho. |
+| 🤔 **Do approaches me confusion hai** | Dono ki theoretical Time aur Space complexity compare karo aur constraints se match karo. |
+| 🔀 **Sorting se koi faayda dikh raha hai?** | Data sort karo, phir Two Pointers, Binary Search ya Greedy try karo. |
+| 💾 **Extra memory use karne ki permission hai?** | Agar haan, to `HashMap`, `HashSet` ya frequency array se time complexity drop karo. |
+| 📉 **DP lag raha hai par state nahi mil rahi** | Pehle brute recursion likho; dekho kaunse function parameters change ho rahe hain, wahi tumhari DP state hai. |
+| ⏳ **15–20 minutes se stuck ho** | Solution dekh lo! **Samjho kyun aur kaise kaam karta hai**, phir 2 din baad bina dekhe scratch se likho. |
+
+<br/>
+
+[⬆ Back to Top](#table-of-contents)
+
+<br/>
+
+<a id="13-worked-examples-step-by-step"></a>
+<div align="center">
+  <img src="./assets/headers/header-13.svg" width="100%" alt="13. Worked Examples Step by Step" />
 </div>
 
 Har example me wahi **Thinking Ladder** framework lagaya gaya hai: test case observation se shuru, clean Java code pe khatam.
@@ -679,19 +776,19 @@ Har example me wahi **Thinking Ladder** framework lagaya gaya hai: test case obs
 
 | # | Problem | Core Pattern | Target Time | Target Space | Direct Jump |
 | :---: | :--- | :--- | :---: | :---: | :---: |
-| **10.1** | [Product of Array Except Self](#101-product-of-array-except-self) | `Prefix & Suffix Product` | `O(n)` | `O(1)` | [View Solution ➔](#101-product-of-array-except-self) |
-| **10.2** | [Subarray Sum Equals K](#102-subarray-sum-equals-k) | `Prefix Sum + HashMap` | `O(n)` | `O(n)` | [View Solution ➔](#102-subarray-sum-equals-k) |
-| **10.3** | [Container With Most Water](#103-container-with-most-water) | `Two Pointers (Greedy Choice)` | `O(n)` | `O(1)` | [View Solution ➔](#103-container-with-most-water) |
-| **10.4** | [Merge Intervals](#104-merge-intervals) | `Sorting by Start + Greedy` | `O(n log n)` | `O(n)` | [View Solution ➔](#104-merge-intervals) |
-| **10.5** | [Koko Eating Bananas](#105-koko-eating-bananas) | `Binary Search on Answer` | `O(n log(max))` | `O(1)` | [View Solution ➔](#105-koko-eating-bananas) |
-| **10.6** | [Coin Change](#106-coin-change) | `Bottom-Up Dynamic Programming` | `O(amount × coins)` | `O(amount)` | [View Solution ➔](#106-coin-change) |
-| **10.7** | [Number of Islands](#107-number-of-islands) | `2D Grid DFS (In-place Sink)` | `O(R × C)` | `O(R × C)` | [View Solution ➔](#107-number-of-islands) |
-| **10.8** | [Subsets](#108-subsets) | `Backtracking (Decision Tree)` | `O(n × 2ⁿ)` | `O(n)` | [View Solution ➔](#108-subsets) |
+| **13.1** | [Product of Array Except Self](#131-product-of-array-except-self) | `Prefix & Suffix Product` | `O(n)` | `O(1)` | [View Solution ➔](#131-product-of-array-except-self) |
+| **13.2** | [Subarray Sum Equals K](#132-subarray-sum-equals-k) | `Prefix Sum + HashMap` | `O(n)` | `O(n)` | [View Solution ➔](#132-subarray-sum-equals-k) |
+| **13.3** | [Container With Most Water](#133-container-with-most-water) | `Two Pointers (Greedy Choice)` | `O(n)` | `O(1)` | [View Solution ➔](#133-container-with-most-water) |
+| **13.4** | [Merge Intervals](#134-merge-intervals) | `Sorting by Start + Greedy` | `O(n log n)` | `O(n)` | [View Solution ➔](#134-merge-intervals) |
+| **13.5** | [Koko Eating Bananas](#135-koko-eating-bananas) | `Binary Search on Answer` | `O(n log(max))` | `O(1)` | [View Solution ➔](#135-koko-eating-bananas) |
+| **13.6** | [Coin Change](#136-coin-change) | `Bottom-Up Dynamic Programming` | `O(amount × coins)` | `O(amount)` | [View Solution ➔](#136-coin-change) |
+| **13.7** | [Number of Islands](#137-number-of-islands) | `2D Grid DFS (In-place Sink)` | `O(R × C)` | `O(R × C)` | [View Solution ➔](#137-number-of-islands) |
+| **13.8** | [Subsets](#138-subsets) | `Backtracking (Decision Tree)` | `O(n × 2ⁿ)` | `O(n)` | [View Solution ➔](#138-subsets) |
 
 <br/>
 
-<a id="101-product-of-array-except-self"></a>
-### 10.1 📦 Product of Array Except Self
+<a id="131-product-of-array-except-self"></a>
+### 13.1 📦 Product of Array Except Self
 
 > **Tags:** `Arrays` • `Prefix/Suffix Product` &nbsp;|&nbsp; ⏱️ **Target:** `O(n)` Time, `O(1)` Extra Space
 
@@ -759,8 +856,8 @@ public int[] productExceptSelf(int[] nums) {
 
 <br/>
 
-<a id="102-subarray-sum-equals-k"></a>
-### 10.2 ➕ Subarray Sum Equals K
+<a id="132-subarray-sum-equals-k"></a>
+### 13.2 ➕ Subarray Sum Equals K
 
 > **Tags:** `Arrays` • `Prefix Sum` • `HashMap` &nbsp;|&nbsp; ⏱️ **Target:** `O(n)` Time, `O(n)` Space
 
@@ -818,8 +915,8 @@ public int subarraySum(int[] nums, int k) {
 
 <br/>
 
-<a id="103-container-with-most-water"></a>
-### 10.3 🌊 Container With Most Water
+<a id="133-container-with-most-water"></a>
+### 13.3 🌊 Container With Most Water
 
 > **Tags:** `Two Pointers` • `Greedy Choice` &nbsp;|&nbsp; ⏱️ **Target:** `O(n)` Time, `O(1)` Space
 
@@ -884,8 +981,8 @@ public int maxArea(int[] h) {
 
 <br/>
 
-<a id="104-merge-intervals"></a>
-### 10.4 📏 Merge Intervals
+<a id="134-merge-intervals"></a>
+### 13.4 📏 Merge Intervals
 
 > **Tags:** `Intervals` • `Sorting` • `Greedy` &nbsp;|&nbsp; ⏱️ **Target:** `O(n log n)` Time, `O(n)` Space
 
@@ -938,8 +1035,8 @@ public int[][] merge(int[][] intervals) {
 
 <br/>
 
-<a id="105-koko-eating-bananas"></a>
-### 10.5 🍌 Koko Eating Bananas (Binary Search on Answer)
+<a id="135-koko-eating-bananas"></a>
+### 13.5 🍌 Koko Eating Bananas (Binary Search on Answer)
 
 > **Tags:** `Binary Search on Answer` • `Monotonicity` &nbsp;|&nbsp; ⏱️ **Target:** `O(n log(max(piles)))`
 
@@ -1012,8 +1109,8 @@ private long hours(int[] piles, int k) {
 
 <br/>
 
-<a id="106-coin-change"></a>
-### 10.6 🪙 Coin Change (DP Kaise Banta Hai)
+<a id="136-coin-change"></a>
+### 13.6 🪙 Coin Change (DP Kaise Banta Hai)
 
 > **Tags:** `Dynamic Programming` • `Bottom-Up Tabulation` &nbsp;|&nbsp; ⏱️ **Target:** `O(amount × coins.length)`
 
@@ -1092,8 +1189,8 @@ public int coinChange(int[] coins, int amount) {
 
 <br/>
 
-<a id="107-number-of-islands"></a>
-### 10.7 🏝️ Number of Islands (Grid + DFS)
+<a id="137-number-of-islands"></a>
+### 13.7 🏝️ Number of Islands (Grid + DFS)
 
 > **Tags:** `2D Grid` • `Graphs` • `DFS Traversal` &nbsp;|&nbsp; ⏱️ **Target:** `O(R × C)` Time, `O(R × C)` Space
 
@@ -1161,8 +1258,8 @@ private void dfs(char[][] g, int r, int c) {
 
 <br/>
 
-<a id="108-subsets"></a>
-### 10.8 🌿 Subsets (Backtracking)
+<a id="138-subsets"></a>
+### 13.8 🌿 Subsets (Backtracking)
 
 > **Tags:** `Backtracking` • `Recursion` • `Combinatorics` &nbsp;|&nbsp; ⏱️ **Target:** `O(n × 2ⁿ)`
 
@@ -1223,103 +1320,6 @@ private void go(int[] nums, int start, List<Integer> path, List<List<Integer>> r
 
 > [!TIP]
 > **📌 Key Lesson:** Backtracking ke teen basic pillars hote hain: **Choose, Explore, Undo.** Aur ye dhyan rakho ki answer kab collect karna hai — har intermediate node pe ya sirf leaf base case pe.
-
-<br/>
-
-[⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<a id="11-test-case-padhne-ki-6-techniques"></a>
-<div align="center">
-  <img src="./assets/headers/header-11.svg" width="100%" alt="11. Test Case Padhne Ki 6 Techniques" />
-</div>
-
-Jab logic bilkul na soojh raha ho, sample test case ko in **6 nazron** se dekho:
-
-| # | Technique | Kya Karna Hai | Kab Kaam Aati Hai |
-| :---: | :--- | :--- | :--- |
-| **1** | 📏 **Size Check** | Input aur output ka size ratio compare karo (`n &rarr; n`, `n &rarr; 1`, `n &rarr; 2ⁿ`) | `n &rarr; 2ⁿ` = Subsets, `n &rarr; n!` = Permutations, `n &rarr; 1` = DP/Greedy/Reduce |
-| **2** | 🔄 **Kya Badla, Kya Same** | Kaunse elements apni jagah pe hain aur kaunse shift hue? | Array Partition, In-place sorting, Array Rotation |
-| **3** | 🪜 **Chhota Bana Ke Dekho** | `n = 1, 2, 3, 4` ke answers paper pe manually likho | Recurrence relation, DP base cases, Math sequences |
-| **4** | ⏪ **Ulta Chalo** | Final output se input ki taraf reverse calculate karo | Binary Search on Answer, Prefix Sum + Map lookups |
-| **5** | ⚠️ **Extreme Cases** | Sab numbers identical, already sorted, negatives, extreme bounds | Greedy assumptions test karna, Edge bug discovery |
-| **6** | 🥊 **Counter-Example Banao** | Khud ek aisa input design karo jo tumhare sochi hui trick ko break kare | Greedy confirm ya reject karne ke liye |
-
-<br/>
-
-> [!NOTE]
-> **Example (Technique 3 In Action):**  
-> Maan lo tumne dekha: `n=1 &rarr; 1`, `n=2 &rarr; 2`, `n=3 &rarr; 3`, `n=4 &rarr; 5`, `n=5 &rarr; 8`.  
-> Sequence bana: `1, 2, 3, 5, 8` &rarr; Har number pichhle do ka sum hai!  
-> Bina kisi formula ko soche Fibonacci recurrence mil gayi!
-
-<br/>
-
-### 📝 Fill-in-the-Blank Template
-
-Har tough problem solve karte waqt ye 7 sentences complete karo:
-
-```text
-1. "Input ____________ hai aur output ____________ chahiye."
-2. "Haath se paper pe karte waqt maine ____________ kaam baar-baar kiya, aur ____________ yaad rakha."
-3. "Brute force solution ____________ hai (complexity ____________), par constraints ____________ hain, isliye ye TLE dega/chalega."
-4. "Brute force me ____________ computation baar-baar repeat ho raha hai (waste)."
-5. "Is waste ko hatane ke liye main ____________ (tool / data structure) use kar sakta hoon."
-6. "Ye tool 100% kaam karega kyunki ____________."
-7. "Edge cases jo handle karne hain: ____________, ____________, ____________."
-```
-
-> [!TIP]
-> Agar ye 7 sentences complete fill ho gaye, to ab tumhara logic ban chuka hai — **ab bas syntax likhna bacha hai!**
-
-<br/>
-
-[⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<a id="12-edge-cases-checklist"></a>
-<div align="center">
-  <img src="./assets/headers/header-12.svg" width="100%" alt="12. Edge Cases Checklist" />
-</div>
-
-Final code submit karne se pehle ye 9 checks zaroor verify karo:
-
-- [ ] 📭 **Empty input:** Empty array `[]` ya empty string `""` handle kiya?
-- [ ] 1️⃣ **Single element:** Array with single element `[5]` sahi output deta hai?
-- [ ] 👯 **Identical elements:** Sabhi elements same hon `[7, 7, 7, 7]` to logic break to nahi hota?
-- [ ] ➖ **Negative numbers aur Zero:** `0` aur negative integers test kiye? (e.g. subarray sum, product, division)
-- [ ] 🔁 **Duplicates:** Input me duplicate values aane se multiple counts ya false matches to nahi ban rahe?
-- [ ] 📶 **Already sorted ya Reverse sorted:** Pre-sorted array pe algorithm infinite loop ya worst-case me to nahi jata?
-- [ ] 💥 **Integer Overflow:** Calculations `long` me karni chahiye thi to nahi? (`lo + (hi - lo) / 2` use kiya?)
-- [ ] 🚫 **Index Out of Bounds:** Pointer checks `i + 1`, `i - 1`, `mid - 1` boundary pe safe hain?
-- [ ] ❓ **No Solution Exists:** Agar valid answer exist hi na kare to expected default return value kya hai (`-1`, `null`, `[]`)?
-
-<br/>
-
-[⬆ Back to Top](#table-of-contents)
-
-<br/>
-
-<a id="13-jab-atak-jao-to-kya-karo"></a>
-<div align="center">
-  <img src="./assets/headers/header-13.svg" width="100%" alt="13. Jab Atak Jao To Kya Karo" />
-</div>
-
-Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist use karo:
-
-| Situation / Problem | Immediate Action Plan |
-| :--- | :--- |
-| 🤯 **Kuch samajh nahi aa raha** | Sabse chhota input (2-3 elements) lo aur paper pe manually solve karo. |
-| 🧱 **Brute force bhi nahi soojh raha** | *"Saare combinations / possibilities explore karo"* socho, phir loops ya recursion me convert karo. |
-| 🐌 **Brute force hai par slow hai (TLE)** | Bottleneck identify karo: search slow hai, sorting baar-baar ho rahi hai, ya duplicate computation hai? |
-| ❓ **Pattern pehchan nahi aa raha** | [Section 7: Keyword Technique Table](#7-keyword-se-technique-pehchano) ka cheat-sheet dekho. |
-| 🤔 **Do approaches me confusion hai** | Dono ki theoretical Time aur Space complexity compare karo aur constraints se match karo. |
-| 🔀 **Sorting se koi faayda dikh raha hai?** | Data sort karo, phir Two Pointers, Binary Search ya Greedy try karo. |
-| 💾 **Extra memory use karne ki permission hai?** | Agar haan, to `HashMap`, `HashSet` ya frequency array se time complexity drop karo. |
-| 📉 **DP lag raha hai par state nahi mil rahi** | Pehle brute recursion likho; dekho kaunse function parameters change ho rahe hain, wahi tumhari DP state hai. |
-| ⏳ **15–20 minutes se stuck ho** | Solution dekh lo! **Samjho kyun aur kaise kaam karta hai**, phir 2 din baad bina dekhe scratch se likho. |
 
 <br/>
 

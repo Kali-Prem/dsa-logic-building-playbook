@@ -1,86 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 125" width="100%" height="125" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 152" width="100%" height="152" fill="none">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="authBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e172a" />
-      <stop offset="60%" stop-color="#0a101f" />
-      <stop offset="100%" stop-color="#050814" />
+    <!-- 1. Rich Royal Obsidian Nebula Background -->
+    <linearGradient id="authorCosmicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1026" />
+      <stop offset="30%" stop-color="#140e2b" />
+      <stop offset="70%" stop-color="#0c1329" />
+      <stop offset="100%" stop-color="#070914" />
     </linearGradient>
 
-    <!-- Vibrant Gradient Accent -->
-    <linearGradient id="authGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff4d6d" />
-      <stop offset="50%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#38bdf8" />
+    <!-- 2. Radiant Holographic Border Gradient -->
+    <linearGradient id="holoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3366" />
+      <stop offset="25%" stop-color="#a855f7" />
+      <stop offset="60%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#00f2fe" />
     </linearGradient>
 
-    <!-- Red-Cyan Badge Gradient -->
-    <linearGradient id="authBadgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff4d6d" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.10" />
+    <!-- 3. Glass Sheen Top Edge Line -->
+    <linearGradient id="topGlassSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="15%" stop-color="#ff4d6d" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="85%" stop-color="#00f2fe" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Glow Filter -->
-    <filter id="authGlow" x="-20%" y="-30%" width="140%" height="160%">
+    <!-- 4. Text & Accent Radiant Gradient -->
+    <linearGradient id="accentHolo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="75%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <!-- 5. Tag Pill Background Gradient -->
+    <linearGradient id="pillGradBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3366" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.22" />
+    </linearGradient>
+
+    <!-- 6. Button Pill Gradient -->
+    <linearGradient id="btnPillBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14182e" />
+      <stop offset="100%" stop-color="#0b0e1e" />
+    </linearGradient>
+
+    <!-- Ambient Cosmic Radial Glows -->
+    <radialGradient id="nebulaPink" cx="15%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#ff2a6d" stop-opacity="0.28" />
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#0f1026" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nebulaCyan" cx="85%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#070914" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nebulaPurple" cx="50%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Border Soft Glow Filter -->
+    <filter id="cardNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
+
+    <!-- Tech Dot Grid Pattern -->
+    <pattern id="techDotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.1" fill="#818cf8" opacity="0.22" />
+    </pattern>
   </defs>
 
   <style>
-    .auth-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1.5px; fill: #ff4d6d; }
-    .auth-name { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 23px; fill: #ffffff; letter-spacing: -0.4px; }
-    .auth-bio { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 13.5px; fill: #94a3b8; }
-    .auth-pill-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #38bdf8; letter-spacing: 0.3px; }
-    .auth-star-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #f59e0b; }
-    .kp-monogram { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 28px; fill: url(#authGrad); letter-spacing: -0.5px; }
+    .auth-tag-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 2px; fill: #ffffff; }
+    .auth-title-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 26px; fill: #ffffff; letter-spacing: -0.4px; }
+    .auth-bio-txt { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 13.5px; fill: #cbd5e1; }
+    .auth-pill-link { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #38bdf8; letter-spacing: 0.3px; }
+    .auth-pill-star { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #fbbf24; letter-spacing: 0.2px; }
+    .watermark-kp { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; font-size: 115px; fill: #ffffff; letter-spacing: -3px; }
   </style>
 
-  <!-- Container Base -->
-  <rect x="2" y="2" width="916" height="121" rx="16" fill="url(#authBg)" stroke="#1e293b" stroke-width="2" />
+  <!-- Ambient Outer Glow -->
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="none" stroke="url(#holoBorder)" stroke-width="2" filter="url(#cardNeonGlow)" opacity="0.4" />
 
-  <!-- Glowing Left Accent Bar -->
-  <rect x="2" y="14" width="6" height="97" rx="3" fill="url(#authGrad)" filter="url(#authGlow)" />
+  <!-- Base Solid Card Container -->
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="url(#authorCosmicBg)" stroke="url(#holoBorder)" stroke-width="2" />
 
-  <!-- Author Monogram Badge Box -->
-  <g transform="translate(24, 23)">
-    <rect width="78" height="78" rx="16" fill="url(#authBadgeBg)" stroke="url(#authGrad)" stroke-width="2" />
-    <!-- Monogram Initial -->
-    <text x="39" y="46" text-anchor="middle" class="kp-monogram">KP</text>
-    <!-- Tag Pill -->
-    <rect x="10" y="54" width="58" height="16" rx="8" fill="#0f172a" stroke="#ff4d6d" stroke-width="1" />
-    <text x="39" y="66" text-anchor="middle" font-size="9.5" font-weight="900" fill="#ff4d6d" letter-spacing="0.5px">AUTHOR</text>
-  </g>
+  <!-- Layered Cosmic Nebula Glows -->
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="url(#nebulaPink)" />
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="url(#nebulaCyan)" />
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="url(#nebulaPurple)" />
 
-  <!-- Content Stack -->
-  <g transform="translate(122, 20)">
-    <!-- Category Tag -->
-    <text x="0" y="18" class="auth-tag">CREATOR • MAINTAINER</text>
+  <!-- Subtle Tech Dot Matrix Overlay -->
+  <rect x="2" y="2" width="916" height="148" rx="20" fill="url(#techDotGrid)" />
 
-    <!-- Author Name & Handle -->
-    <text x="0" y="46" class="auth-name">Prem • <tspan fill="#38bdf8">@Kali-Prem</tspan></text>
+  <!-- Watermark Monogram Background in Center -->
+  <text x="460" y="120" text-anchor="middle" class="watermark-kp" opacity="0.035">KP</text>
 
-    <!-- Bio / Philosophy -->
-    <text x="0" y="72" class="auth-bio">Passionate about DSA logic building, intuition-first mental models &amp; clean code architectures</text>
+  <!-- Top Glass Sheen Line -->
+  <line x1="30" y1="3" x2="890" y2="3" stroke="url(#topGlassSheen)" stroke-width="2" stroke-linecap="round" />
 
-    <!-- Quick Links / Badges Pill -->
-    <g transform="translate(0, 81)">
+  <!-- Centered Content Stack -->
+  <g transform="translate(460, 0)">
+    <!-- 1. Centered Header Pill -->
+    <g transform="translate(-140, 16)">
+      <rect width="280" height="24" rx="12" fill="url(#pillGradBg)" stroke="url(#holoBorder)" stroke-width="1.2" />
+      <text x="140" y="16" text-anchor="middle" class="auth-tag-txt">&#10022; CREATOR &amp; MAINTAINER &#10022;</text>
+    </g>
+
+    <!-- 2. Author Name & Handle -->
+    <text x="0" y="69" text-anchor="middle" class="auth-title-txt">
+      Prem  &#8226;  @Kali-Prem
+    </text>
+
+    <!-- 3. Bio & Philosophy -->
+    <text x="0" y="97" text-anchor="middle" class="auth-bio-txt">
+      Passionate about DSA logic building, intuition-first mental models &amp; clean code architectures
+    </text>
+
+    <!-- 4. Action Pills -->
+    <g transform="translate(0, 111)">
       <!-- GitHub Profile Pill -->
-      <g>
-        <rect width="170" height="20" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
-        <text x="10" y="14" class="auth-pill-text">🐙 github.com/Kali-Prem</text>
+      <g transform="translate(-235, 0)">
+        <rect width="205" height="26" rx="13" fill="url(#btnPillBg)" stroke="#38bdf8" stroke-width="1.3" />
+        <text x="102" y="17" text-anchor="middle" class="auth-pill-link">&#128025; github.com/Kali-Prem</text>
       </g>
       <!-- Star Reminder Pill -->
-      <g transform="translate(180, 0)">
-        <rect width="240" height="20" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2" />
-        <text x="10" y="14" class="auth-star-text">⭐ Star the repo if this playbook helped you</text>
+      <g transform="translate(-15, 0)">
+        <rect width="250" height="26" rx="13" fill="url(#btnPillBg)" stroke="#f59e0b" stroke-width="1.3" />
+        <text x="125" y="17" text-anchor="middle" class="auth-pill-star">&#11088; Star the repo if this playbook helped</text>
       </g>
     </g>
-  </g>
-
-  <!-- Right Decorative Node -->
-  <g transform="translate(885, 62)">
-    <circle cx="0" cy="0" r="16" fill="url(#authBadgeBg)" stroke="url(#authGrad)" stroke-width="1.5" />
-    <circle cx="0" cy="0" r="5" fill="#38bdf8" />
   </g>
 </svg>
