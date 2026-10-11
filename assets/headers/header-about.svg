@@ -52,13 +52,13 @@
   <!-- Content Stack (Middle to Right) -->
   <g transform="translate(118, 20)">
     <!-- Small Category Pill / Tagline -->
-    <text x="0" y="20" class="topic-tag">FOUNDATION & OVERVIEW</text>
+    <text x="0" y="20" class="topic-tag">FOUNDATION &amp; OVERVIEW</text>
 
     <!-- Prominent Big Bold Title -->
     <text x="0" y="54" class="topic-title">Ye Repo Kis Liye Hai</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">Problem Understanding, Pattern Derivation & Core Blueprint</text>
+    <text x="0" y="80" class="topic-sub">Problem Understanding, Pattern Derivation &amp; Core Blueprint</text>
   </g>
 
   <!-- Right Decorative Gradient Nodes -->

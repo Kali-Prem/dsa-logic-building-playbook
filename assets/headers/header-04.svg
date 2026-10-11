@@ -58,7 +58,7 @@
     <text x="0" y="54" class="topic-title">Test Case Se Logic Kaise Nikale</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">Hand-Tracing, Pattern Discovery & Kadane's Derivation</text>
+    <text x="0" y="80" class="topic-sub">Hand-Tracing, Pattern Discovery &amp; Kadane&#x27;s Derivation</text>
   </g>
 
   <!-- Right Decorative Gradient Nodes -->

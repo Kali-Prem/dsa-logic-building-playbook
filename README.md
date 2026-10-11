@@ -2,28 +2,10 @@
 
 <img src="./assets/hero-banner.svg" width="100%" alt="DSA Logic Building Playbook Banner" />
 
-<br/><br/>
+</div>
 
-> **"DSA ki problem me logic kaise sochein"** — Test case dekh ke input/output se pattern nikalna, brute force se optimal tak jana, aur Java me clean code likhna. Ek baar padho, har problem pe yahi steps lagao.
-
-<br/>
-
-[![Language: Java](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
-[![Topic: DSA](https://img.shields.io/badge/Topic-DSA%20%26%20Logic-4285F4?style=for-the-badge&logo=google&logoColor=white)](#)
-[![Level: Beginner to Intermediate](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-34A853?style=for-the-badge)](#)
-[![PRs: Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github)](#16-contributing)
-[![Read Time](https://img.shields.io/badge/Read%20Time-~25%20Mins-9C27B0?style=for-the-badge)](#)
-
-<br/>
-
-**Quick Navigation & Offline Resources**
-
-[📖 Explore Guide](#table-of-contents) &nbsp;•&nbsp; 
-[⚡ Quick Revision Cheat Sheet](#15-one-page-quick-revision) &nbsp;•&nbsp; 
-[🪜 Thinking Ladder](#9-thinking-ladder) &nbsp;•&nbsp; 
-[📥 Download PDF Part 1](./DSA_Logic_Playbook-01.pdf) &nbsp;•&nbsp; 
-[📥 Download Java PDF Part 2](./DSA_Logic_Playbook_Java-final-02.pdf)
-
+<div align="center">
+  <img src="./assets/quote-card.svg" width="100%" alt="Core Philosophy: DSA ki problem me logic kaise sochein" />
 </div>
 
 <br/>
@@ -46,7 +28,8 @@ Zyada log DSA me **code** nahi, **logic** me atakte hain. Ye guide aapko sikhati
 * 💻 **8 complete worked examples** — Test case se le kar line-by-line Java code tak poora step-by-step breakdown.
 
 > [!NOTE]
-> **👥 Kiske liye:** DSA beginners, interview preparation, college students, aur competitive programming shuru karne wale sabhi developers.
+> **👥 Kiske liye:** DSA beginners, interview preparation, college students, aur competitive programming shuru karne wale sabhi developers.  
+> 📥 **Offline Resources:** [Download PDF Part 1](./DSA_Logic_Playbook-01.pdf) &nbsp;•&nbsp; [Download Java PDF Part 2](./DSA_Logic_Playbook_Java-final-02.pdf)
 
 <br/>
 

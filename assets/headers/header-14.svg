@@ -55,10 +55,10 @@
     <text x="0" y="20" class="topic-tag">SECTION 14 • ROADMAP</text>
 
     <!-- Prominent Big Bold Title -->
-    <text x="0" y="54" class="topic-title">Practice Plan & Roadmap</text>
+    <text x="0" y="54" class="topic-title">Practice Plan &amp; Roadmap</text>
 
     <!-- Crystal Clear Subtitle -->
-    <text x="0" y="80" class="topic-sub">High-Retention Spaced Repetition & Curated Problem Progression</text>
+    <text x="0" y="80" class="topic-sub">High-Retention Spaced Repetition &amp; Curated Problem Progression</text>
   </g>
 
   <!-- Right Decorative Gradient Nodes -->

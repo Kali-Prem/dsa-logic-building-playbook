@@ -7,41 +7,40 @@
       <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
 
-    <!-- Title Gradient -->
+    <!-- LIVE ANIMATED TITLE GRADIENT -->
     <linearGradient id="heroTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="35%" stop-color="#818cf8" />
-      <stop offset="70%" stop-color="#c084fc" />
-      <stop offset="100%" stop-color="#f472b6" />
+      <stop offset="0%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#f472b6;#06b6d4;#38bdf8" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="30%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#f472b6;#06b6d4;#38bdf8;#818cf8" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="65%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#06b6d4;#38bdf8;#818cf8;#c084fc" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#38bdf8;#818cf8;#f472b6;#f472b6" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <animate attributeName="x1" values="0%;100%;0%" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;200%;100%" dur="7s" repeatCount="indefinite" />
     </linearGradient>
 
-    <!-- Subtitle Gradient -->
-    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#cbd5e1" />
-      <stop offset="100%" stop-color="#94a3b8" />
+    <!-- SHIMMER SPECULAR BEAM GRADIENT -->
+    <linearGradient id="titleShimmer" x1="-100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+      <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
     </linearGradient>
 
-    <!-- Chip Gradients -->
-    <linearGradient id="chip1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#3b82f6" />
-    </linearGradient>
-    <linearGradient id="chip2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8b5cf6" />
-      <stop offset="100%" stop-color="#d946ef" />
-    </linearGradient>
-    <linearGradient id="chip3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#06b6d4" />
-    </linearGradient>
-    <linearGradient id="chip4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f59e0b" />
-      <stop offset="100%" stop-color="#ef4444" />
-    </linearGradient>
-
-    <!-- Glow Filter -->
-    <filter id="heroGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+    <!-- LIVE BREATHING GLOW FILTER -->
+    <filter id="heroGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur">
+        <animate attributeName="stdDeviation" values="5;9;5" dur="3s" repeatCount="indefinite" />
+      </feGaussianBlur>
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
@@ -52,35 +51,78 @@
 
   <style>
     .hero-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-    .hero-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: 1.5px; }
-    .hero-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; }
+    .hero-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 1.5px; }
+    .hero-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; }
     .chip-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; }
   </style>
 
   <!-- Container Base -->
   <rect x="2" y="2" width="1196" height="316" rx="20" fill="url(#heroBg)" stroke="#1e293b" stroke-width="2" />
 
-  <!-- Ambient Glowing Orbs in Background -->
-  <circle cx="200" cy="100" r="120" fill="#38bdf8" opacity="0.08" filter="url(#softAura)" />
-  <circle cx="1000" cy="220" r="140" fill="#c084fc" opacity="0.08" filter="url(#softAura)" />
-  <circle cx="600" cy="160" r="100" fill="#f43f5e" opacity="0.06" filter="url(#softAura)" />
+  <!-- Ambient Glowing Orbs in Background with gentle breathing -->
+  <circle cx="200" cy="100" r="120" fill="#38bdf8" opacity="0.08" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.06;0.12;0.06" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1000" cy="220" r="140" fill="#c084fc" opacity="0.08" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.08;0.14;0.08" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="600" cy="160" r="100" fill="#f43f5e" opacity="0.06" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="6s" repeatCount="indefinite" />
+  </circle>
 
-  <!-- Top Pill Badge -->
+  <!-- Top Pill Badge with Live Radar Pulse -->
   <g transform="translate(600, 48)">
-    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
-    <circle cx="-118" cy="0" r="5" fill="#10b981" />
-    <text x="-105" y="4" fill="#38bdf8" class="hero-tag" font-size="11">THE SYSTEMATIC MENTAL MODEL</text>
+    <rect x="-160" y="-14" width="320" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <!-- Radar ring -->
+    <circle cx="-138" cy="0" r="5" fill="none" stroke="#10b981" stroke-width="1.5">
+      <animate attributeName="r" values="5;11;5" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <!-- Solid dot -->
+    <circle cx="-138" cy="0" r="5" fill="#10b981" />
+    <text x="-122" y="4" fill="#38bdf8" class="hero-tag" font-size="11">THE SYSTEMATIC MENTAL MODEL &#8226; 2026</text>
   </g>
 
-  <!-- Main Hero Title -->
+  <!-- MAIN HERO TITLE - Base Living Gradient Layer -->
   <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#heroTitleGrad)" filter="url(#heroGlow)">DSA LOGIC BUILDING PLAYBOOK</text>
 
-  <!-- Subtitle -->
-  <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#cbd5e1">
-    Test Case Dekh Kar Pattern Pakdo • Brute Force Se Optimal Tak Jao • Clean Java Me Likho
-  </text>
-  <text x="600" y="200" text-anchor="middle" class="hero-sub" font-size="13.5" fill="#94a3b8">
-    Zero Guesswork • 7-Step Framework • Thinking Ladder • 8 Complete Worked Examples
+  <!-- MAIN HERO TITLE - Shimmering Specular Light Beam Layer -->
+  <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#titleShimmer)">DSA LOGIC BUILDING PLAYBOOK</text>
+
+  <!-- DYNAMIC LIVE ROTATING SUBTITLES (Smooth 4-phrase cycle) -->
+  <g>
+    <!-- Phrase 1 -->
+    <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#38bdf8">
+      <animate attributeName="opacity" values="0;1;1;0;0;0;0;0;0" keyTimes="0;0.04;0.22;0.25;0.5;0.75;0.9;0.98;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="y" values="178;172;172;166;166;166;166;166;178" keyTimes="0;0.04;0.22;0.25;0.5;0.75;0.9;0.98;1" dur="12s" repeatCount="indefinite" />
+      &#129513; Test Case Dekh Kar Pattern Pakdo &#8226; Haath Se Dry Run Karo
+    </text>
+
+    <!-- Phrase 2 -->
+    <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#818cf8">
+      <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0" keyTimes="0;0.24;0.25;0.29;0.47;0.5;0.75;0.98;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="y" values="178;178;178;172;172;166;166;166;178" keyTimes="0;0.24;0.25;0.29;0.47;0.5;0.75;0.98;1" dur="12s" repeatCount="indefinite" />
+      &#9889; Brute Force Hamesha Pehle &#8226; Bottleneck Pehchan Kar Optimize Karo
+    </text>
+
+    <!-- Phrase 3 -->
+    <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#c084fc">
+      <animate attributeName="opacity" values="0;0;0;0;0;1;1;0;0" keyTimes="0;0.25;0.49;0.5;0.54;0.72;0.75;0.98;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="y" values="178;178;178;178;178;172;172;166;178" keyTimes="0;0.25;0.49;0.5;0.54;0.72;0.75;0.98;1" dur="12s" repeatCount="indefinite" />
+      &#128640; Problem Naya Nahi Hota, Pattern Purana Hota Hai &#8226; Zero Guesswork
+    </text>
+
+    <!-- Phrase 4 -->
+    <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#f472b6">
+      <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;1" keyTimes="0;0.25;0.5;0.74;0.75;0.79;0.96;0.98;1" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="y" values="178;178;178;178;178;178;178;172;172" keyTimes="0;0.25;0.5;0.74;0.75;0.79;0.96;0.98;1" dur="12s" repeatCount="indefinite" />
+      &#9749; Production-Grade Clean Java Templates &#8226; 8 Step-by-Step Worked Problems
+    </text>
+  </g>
+
+  <!-- Static Secondary Subtitle -->
+  <text x="600" y="202" text-anchor="middle" class="hero-sub" font-size="13" fill="#94a3b8">
+    Input Constraints &#8594; Time Complexity &#8594; Core Pattern &#8594; Edge Cases Checklist &#8594; Clean Code
   </text>
 
   <!-- Bottom Floating Feature Chips -->
@@ -88,22 +130,22 @@
     <!-- Chip 1 -->
     <g transform="translate(-360, 0)">
       <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#38bdf8" class="chip-text">⚡ 7-Step Framework</text>
+      <text x="0" y="4" text-anchor="middle" fill="#38bdf8" class="chip-text">&#9889; 7-Step Framework</text>
     </g>
     <!-- Chip 2 -->
     <g transform="translate(-120, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#818cf8" class="chip-text">🪜 Thinking Ladder</text>
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#818cf8" stroke="#818cf8" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#818cf8" class="chip-text">&#129692; Thinking Ladder</text>
     </g>
     <!-- Chip 3 -->
     <g transform="translate(120, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#10b981" class="chip-text">🧰 Waste ➔ Tool Rx</text>
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#10b981" stroke="#10b981" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#10b981" class="chip-text">&#129520; Waste &#8594; Tool Rx</text>
     </g>
     <!-- Chip 4 -->
     <g transform="translate(360, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#f472b6" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#f472b6" class="chip-text">☕ 100% Java Ready</text>
+      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#f472b6" stroke="#f472b6" stroke-width="1.5" />
+      <text x="0" y="4" text-anchor="middle" fill="#f472b6" class="chip-text">&#9749; 100% Java Ready</text>
     </g>
   </g>
 </svg>
