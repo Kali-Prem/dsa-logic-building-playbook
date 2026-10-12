@@ -20,7 +20,14 @@ Preview pe click karke full video dekho.
 Paste the GitHub-uploaded video URL here on its own line (see instructions I will follow manually), then delete these comment markers.
 INLINE_VIDEO_END -->
 
-[Full quality me YouTube pe dekho](https://youtu.be/G3lIEr2OTxk)
+<a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/YouTube-Watch%20in%20Full%20HD-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube" />
+</a>
+<br/>
+
+<a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
+  <img src="./assets/youtube-icon.svg" width="22" height="16" alt="YouTube Logo" align="middle" /> <b>Full quality me YouTube pe dekho</b>
+</a>
 
 <br/>
 
