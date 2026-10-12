@@ -10,6 +10,20 @@
 
 <br/>
 
+## Video Walkthrough
+
+[![Video Preview](assets/preview.gif)](assets/dsa-logic-building-playbook-demo.mp4)
+
+Preview pe click karke full video dekho.
+
+<!-- INLINE_VIDEO_START
+Paste the GitHub-uploaded video URL here on its own line (see instructions I will follow manually), then delete these comment markers.
+INLINE_VIDEO_END -->
+
+[Full quality me YouTube pe dekho](https://youtu.be/G3lIEr2OTxk)
+
+<br/>
+
 <a id="ye-repo-kis-liye-hai"></a>
 <div align="center">
   <img src="./assets/headers/header-about.svg" width="100%" alt="Ye Repo Kis Liye Hai" />
