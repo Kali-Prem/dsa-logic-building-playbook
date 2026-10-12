@@ -10,24 +10,33 @@
 
 <br/>
 
-## Video Walkthrough
+<div align="center">
 
-[![Video Preview](assets/preview.gif)](assets/dsa-logic-building-playbook-demo.mp4)
+<h2 align="center">🎬 Video Walkthrough</h2>
 
-Preview pe click karke full video dekho.
+<a href="assets/dsa-logic-building-playbook-demo.mp4">
+  <img src="assets/preview.gif" alt="Video Preview" />
+</a>
+
+<p><em>Preview pe click karke full video dekho.</em></p>
 
 <!-- INLINE_VIDEO_START
 Paste the GitHub-uploaded video URL here on its own line (see instructions I will follow manually), then delete these comment markers.
 INLINE_VIDEO_END -->
 
-<a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/YouTube-Watch%20in%20Full%20HD-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube" />
-</a>
-<br/>
+<p>
+  <a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/YouTube-Watch%20in%20Full%20HD-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube" />
+  </a>
+</p>
 
-<a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
-  <img src="./assets/youtube-icon.svg" width="22" height="16" alt="YouTube Logo" align="middle" /> <b>Full quality me YouTube pe dekho</b>
-</a>
+<p>
+  <a href="https://youtu.be/G3lIEr2OTxk" target="_blank" rel="noopener noreferrer">
+    <img src="./assets/youtube-icon.svg" width="22" height="16" alt="YouTube Logo" align="middle" /> <b>Full quality me YouTube pe dekho</b>
+  </a>
+</p>
+
+</div>
 
 <br/>
 
