@@ -138,6 +138,28 @@ Har problem pe ye structured sequence follow karo:
 
 <br/>
 
+### 🔄 7-Step Problem Solving Workflow (Flowchart)
+
+```mermaid
+flowchart TD
+    S1["1. Rephrase Problem<br/>(Apne words me bolo)"] --> S2["2. Input, Output & Constraints<br/>(Bounds & types check karo)"]
+    S2 --> S3["3. Hand Trace Test Case<br/>(Pen-paper pe step-by-step trace)"]
+    S3 --> S4["4. Formulate Brute Force<br/>(Working baseline solution)"]
+    S4 --> S5{"Step 5: Constraints Check<br/>Will Brute Force TLE?"}
+    
+    S5 -->|"Nahi (n is small)"| S7["7. Edge Cases Checklist<br/>(0, negatives, null, duplicates)"]
+    S5 -->|"Haan (n is large)"| S6["6. Find Waste & Pick Tool<br/>(Prescription Matrix match karo)"]
+    
+    S6 --> DryRun{"Dry Run Verify<br/>(Trace table works?)"}
+    DryRun -->|"Nahi (Logic break)"| S3
+    DryRun -->|"Haan (Pass)"| S7
+    
+    S7 --> Code["💻 Write Clean Code<br/>(Translate verified trace to code)"]
+    Code --> Done(["🎯 100% Accepted (AC) on First Submission!"])
+```
+
+<br/>
+
 [⬆ Back to Top](#table-of-contents)
 
 <br/>
@@ -217,6 +239,28 @@ Socho tumhe ye kaam **haath se, bina computer aur bina code ke** karna hai:
 > [!NOTE]
 > **💡 Pattern Nikla:** *"Agar pichhla running sum negative ho jaye to use chhod do, warna aage jodte jao."*  
 > Yahi **Kadane's Algorithm** hai! Tumne bina kisi ratte ke khud ise derive kar liya!
+
+<br/>
+
+#### 🔄 Kadane's Algorithm Decision Flowchart
+
+```mermaid
+flowchart TD
+    Start(["Input: Array nums"]) --> Init["cur = nums[0]<br/>best = nums[0]<br/>i = 1"]
+    Init --> LoopCheck{"i < nums.length?"}
+    
+    LoopCheck -->|"Haan"| Decision{"cur + nums[i] < nums[i]?<br/>(Kya pichhla sum negative tha?)"}
+    
+    Decision -->|"Haan (Negative waste)"| Restart["Fresh Start Subarray:<br/>cur = nums[i]"]
+    Decision -->|"Nahi (Faayda hai)"| Extend["Extend Subarray:<br/>cur = cur + nums[i]"]
+    
+    Restart --> UpdateBest["best = Math.max(best, cur)"]
+    Extend --> UpdateBest
+    
+    UpdateBest --> NextElem["i++"] --> LoopCheck
+    
+    LoopCheck -->|"Nahi (Array scanned)"| Done(["Return best"])
+```
 
 <br/>
 
@@ -378,6 +422,54 @@ Ye table memorise kar lo. Problem me `n` dekhte hi pata chal jata hai ki kitni f
 
 Problem statement ke words me hi solution ka hint chhupa hota hai:
 
+<br/>
+
+### 🧭 Master Pattern Decision Tree (Flowchart)
+
+Jab bhi naya problem samne aaye, is visual decision tree ko follow karke sahi technique tak pahuchein:
+
+```mermaid
+flowchart TD
+    Start(["🎯 Problem Statement Padha"]) --> Q1{"Input / Problem ka nature kya hai?"}
+    
+    %% Branch 1: Array / String
+    Q1 -->|"Array ya String"| ArrCheck{"Kya input SORTED hai?"}
+    
+    ArrCheck -->|"Haan"| SortedDec{"Kya dhoondna hai?"}
+    SortedDec -->|"Pair / Triplet Sum"| T_TP["↔️ Two Pointers"]
+    SortedDec -->|"Target Element / Search"| T_BS["🎯 Binary Search"]
+    
+    ArrCheck -->|"Nahi (Unsorted)"| SubCheck{"Subarray ya Substring contiguous hai?"}
+    SubCheck -->|"Haan"| WindowCheck{"Negative numbers allowed hain?"}
+    WindowCheck -->|"Nahi (Non-negative / Window)"| T_SW["🪟 Sliding Window"]
+    WindowCheck -->|"Haan (Sum = K)"| T_PS["➕ Prefix Sum + HashMap"]
+    
+    SubCheck -->|"Nahi"| LookupCheck{"Duplicates / Frequency / Pair lookups?"}
+    LookupCheck -->|"Haan"| T_HM["🗂️ HashMap / HashSet"]
+    LookupCheck -->|"Nahi"| OrderCheck{"Next Greater / Matching brackets?"}
+    OrderCheck -->|"Haan"| T_ST["🥞 Monotonic Stack"]
+    OrderCheck -->|"Nahi"| T_HP["🏔️ Top K elements &rarr; Min-Heap"]
+    
+    %% Branch 2: Optimization
+    Q1 -->|"Optimization (Min / Max / Count)"| OptCheck{"Overlapping subproblems + Choices?"}
+    OptCheck -->|"Haan (Choices depend on past)"| T_DP["📊 Dynamic Programming (DP)"]
+    OptCheck -->|"Nahi (Locally best choice global optimal hai)"| T_GR["🦅 Greedy (Sort karke)"]
+    OptCheck -->|"Monotonic Answer: check(X) is Yes/No"| T_BSA["🎯 Binary Search on Answer"]
+    
+    %% Branch 3: Graphs / Trees
+    Q1 -->|"Graph ya Tree"| GraphCheck{"Problem ka goal kya hai?"}
+    GraphCheck -->|"Shortest path (unweighted) / Level order"| T_BFS["🌐 BFS (Queue)"]
+    GraphCheck -->|"Path explore / Connected islands"| T_DFS["🌐 DFS (Recursion)"]
+    GraphCheck -->|"Dependencies / Course Schedule"| T_TOPO["📋 Topological Sort"]
+    
+    %% Branch 4: Exhaustive
+    Q1 -->|"Saare Subsets / Permutations"| T_BT["🔄 Backtracking (Recursion Tree)"]
+```
+
+<br/>
+
+### 📋 Direct Keyword to Pattern Matching Table
+
 | Problem me ye Keyword / Requirement Dikhe | Ye Technique Dimag Me Lao |
 | :--- | :--- |
 | 🔀 **Sorted array**, pair ya triplet dhoondna | Two Pointers, Binary Search |
@@ -453,6 +545,27 @@ while (l < r) {
 
 * **💡 Core Idea:** Ek dynamic window `[l, r]` maintain karo. Right pointer badhaye jao, jab condition violate ho to Left pointer se shrink karo.
 * **🎯 Kab Lagayein:** "Longest ya shortest contiguous subarray/substring jisme koi specific condition satisfy ho."
+
+<br/>
+
+#### 🔄 Sliding Window Execution Flowchart
+
+```mermaid
+flowchart TD
+    Start(["Start: l = 0, r = 0, best = 0"]) --> AddRight["1. Window EXPAND karo:<br/>arr[r] ko window state me add karo"]
+    AddRight --> CheckValid{"Kya current window INVALID hai?<br/>(e.g., duplicate character / sum > K)"}
+    
+    CheckValid -->|"Haan (Condition Violated)"| Shrink["2. Window SHRINK karo:<br/>arr[l] hatao aur l++ karo"]
+    Shrink --> CheckValid
+    
+    CheckValid -->|"Nahi (Window Valid hai)"| Record["3. RECORD karo:<br/>best = Math.max(best, r - l + 1)"]
+    
+    Record --> CheckEnd{"r + 1 < n?"}
+    CheckEnd -->|"Haan"| IncR["r++"] --> AddRight
+    CheckEnd -->|"Nahi (End of array)"| ReturnBest(["Return best answer"])
+```
+
+<br/>
 
 ```java
 int l = 0, best = 0;
@@ -530,6 +643,25 @@ return -1;
 
 <br/>
 
+#### 🔄 Binary Search on Answer Flowchart
+
+```mermaid
+flowchart TD
+    Start(["Answer Range Define Karo:<br/>lo = minPossible, hi = maxPossible"]) --> CalcMid["mid = lo + (hi - lo) / 2"]
+    CalcMid --> CheckFeasible{"check(mid) == true?<br/>(Kya ye mid value feasible hai?)"}
+    
+    CheckFeasible -->|"Haan (Feasible)"| SaveAns["Answer save karo: ans = mid<br/>Aur better / chhota try karo:<br/>hi = mid - 1"]
+    CheckFeasible -->|"Nahi (Infeasible / Too slow)"| IncLo["Speed ya capacity badhao:<br/>lo = mid + 1"]
+    
+    SaveAns --> LoopCheck{"lo <= hi?"}
+    IncLo --> LoopCheck
+    
+    LoopCheck -->|"Haan"| CalcMid
+    LoopCheck -->|"Nahi (Search Space Finished)"| ReturnAns(["Return ans (Optimal Solution)"])
+```
+
+<br/>
+
 ### 9.6 🥞 Stack
 
 * **💡 Core Idea:** Last-In-First-Out (LIFO). Jo element sabse recent aaya hai, uski state sabse pehle resolve karni ho.
@@ -592,6 +724,19 @@ void solve(List<Integer> path) {
 
 > [!TIP]
 > **Shortcut Flow:** Pehle Brute Force Recursion &rarr; Phir Memoization (Top-down) &rarr; Finally Tabulation (Bottom-up).
+
+<br/>
+
+#### 🔄 The 4-Stage DP Evolution Flowchart
+
+```mermaid
+flowchart LR
+    Rec["1. Brute Force Recursion<br/>(Choices explore karo)"] --> Check{"Overlapping<br/>Subproblems?"}
+    Check -->|"Nahi"| DC["Divide & Conquer<br/>(MergeSort, Binary Search)"]
+    Check -->|"Haan"| Memo["2. Memoization<br/>(Top-Down + Cache Table)"]
+    Memo --> Tab["3. Tabulation<br/>(Bottom-Up Iterative DP)"]
+    Tab --> SpaceOpt["4. Space Optimization<br/>(O(n) &rarr; O(1) rolling states)"]
+```
 
 <br/>
 
@@ -774,6 +919,37 @@ Final code submit karne se pehle ye 9 checks zaroor verify karo:
 </div>
 
 Jab dimag blank ho jaye, is guide ko as an immediate troubleshooting checklist use karo:
+
+<br/>
+
+### 🧭 Emergency Unblocking Decision Tree (Flowchart)
+
+Jab bhi dimag blank ho ya code TLE de raha ho, is diagnostic flowchart ko step-by-step follow karo:
+
+```mermaid
+flowchart TD
+    Start(["🤯 Problem me atak gaye?"]) --> Step1{"Sample test case haath se paper pe trace kiya?"}
+    Step1 -->|"Nahi"| Act1["Chhota input (2-3 elements) lo aur paper pe manually solve karo"]
+    
+    Step1 -->|"Haan"| Step2{"Kya Brute Force baseline socha?"}
+    Step2 -->|"Nahi"| Act2["Saare combinations / nested loops try karke working baseline banao"]
+    
+    Step2 -->|"Haan"| Step3{"Kya Brute Force TLE dega (n > 10⁴)?"}
+    Step3 -->|"Nahi (Constraints allow karte hain)"| Act3["Direct code karo aur submit karo!"]
+    
+    Step3 -->|"Haan"| Step4{"Bottleneck kahan hai?"}
+    Step4 -->|"Repeated linear search"| T1["HashMap / HashSet use karo O(1)"]
+    Step4 -->|"Repeated range sums"| T2["Prefix Sum use karo O(1)"]
+    Step4 -->|"Repeated subproblems"| T3["Dynamic Programming use karo"]
+    Step4 -->|"Monotonic answer space"| T4["Binary Search on Answer"]
+    Step4 -->|"Sorted array pair check"| T5["Two Pointers use karo"]
+    
+    Step4 -->|"15-20 min se stuck"| Act4["Solution dekho, pattern samjho, aur 2 din baad bina dekhe solve karo"]
+```
+
+<br/>
+
+### 📋 Situation-Wise Action Plan
 
 | Situation / Problem | Immediate Action Plan |
 | :--- | :--- |
@@ -967,6 +1143,25 @@ public int subarraySum(int[] nums, int k) {
 
 <br/>
 
+#### 🔄 Two Pointers Greedy Decision Flowchart
+
+```mermaid
+flowchart TD
+    Init["Pointers set karo: l = 0, r = n - 1<br/>best = 0"] --> Loop{"l < r?"}
+    Loop -->|"Haan"| CalcArea["currentArea = (r - l) × min(h[l], h[r])<br/>best = Math.max(best, currentArea)"]
+    
+    CalcArea --> Compare{"h[l] aur h[r] ko compare karo"}
+    Compare -->|"h[l] < h[r]<br/>(Chhoti left wall bottleneck hai)"| IncL["l++ (Left pointer aage badhao)"]
+    Compare -->|"h[r] <= h[l]<br/>(Chhoti right wall bottleneck hai)"| DecR["r-- (Right pointer peeche lao)"]
+    
+    IncL --> Loop
+    DecR --> Loop
+    
+    Loop -->|"Nahi (Pointers cross ho gaye)"| Done(["Return best"])
+```
+
+<br/>
+
 **📊 Dry Run Trace:**
 
 | `l` | `r` | `h[l]` | `h[r]` | `width` | `area` | Action Taken |
@@ -1085,6 +1280,25 @@ public int[][] merge(int[][] intervals) {
   * Validation pattern: `✘  ✘  ✘  ✔  ✔  ✔  ✔`
   * "Fail ... Fail, Pass ... Pass" pattern me hume pehla `✔` (minimum feasible speed) dhoondna hai.
   * Pehla passing element dhoondna = **Binary Search on Answer Space `[1, max(piles)]`**.
+
+<br/>
+
+#### 🔄 Koko Eating Bananas Decision Flowchart
+
+```mermaid
+flowchart TD
+    Init["Search Space: lo = 1, hi = max(piles)"] --> Loop{"lo < hi?"}
+    Loop -->|"Haan"| CalcMid["mid = lo + (hi - lo) / 2"]
+    CalcMid --> CheckHours{"hours(piles, mid) <= h?<br/>(Kya Koko time pe khatam kar legi?)"}
+    
+    CheckHours -->|"Haan (Feasible)"| SearchLeft["Speed chalegi! Aur slow try karo:<br/>hi = mid"]
+    CheckHours -->|"Nahi (Too Slow / TLE)"| SearchRight["Speed bahut kam hai, badhao:<br/>lo = mid + 1"]
+    
+    SearchLeft --> Loop
+    SearchRight --> Loop
+    
+    Loop -->|"Nahi (lo == hi)"| Done(["Return lo (Minimum Feasible Speed)"])
+```
 
 <br/>
 
@@ -1243,6 +1457,29 @@ public int coinChange(int[] coins, int amount) {
   * Bottom-right ka akela `(3, 3)` cell = Island 3.
 * 🏷️ **Naam Do:** Har naye `'1'` pe maine count badhaya, aur **us se jude saare 1s ko visit karke sink/mita diya** taaki dobara count na ho sakein.
 * 🧰 **Tool:** **DFS Traversal + In-place Visited Mutation (`'1'` &rarr; `'0'`)**.
+
+<br/>
+
+#### 🔄 2D Grid DFS Traversal Flowchart
+
+```mermaid
+flowchart TD
+    Call(["dfs(grid, r, c)"]) --> Check{"Boundary Check & Water Check:<br/>r, c out of bounds OR grid[r][c] != '1'?"}
+    
+    Check -->|"Haan (Invalid / Water / Already Visited)"| ReturnBase["🛑 Return (Stop recursion)"]
+    
+    Check -->|"Nahi (Valid New Land '1')"| Sink["🌊 Sink Cell (Mark Visited):<br/>grid[r][c] = '0'"]
+    
+    Sink --> Dir1["⬇️ dfs(r + 1, c) - Down"]
+    Sink --> Dir2["⬆️ dfs(r - 1, c) - Up"]
+    Sink --> Dir3["➡️ dfs(r, c + 1) - Right"]
+    Sink --> Dir4["⬅️ dfs(r, c - 1) - Left"]
+    
+    Dir1 --> Finish(["Island boundary fully explored & sunk"])
+    Dir2 --> Finish
+    Dir3 --> Finish
+    Dir4 --> Finish
+```
 
 <br/>
 
