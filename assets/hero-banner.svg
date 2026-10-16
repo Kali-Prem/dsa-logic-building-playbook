@@ -1,95 +1,104 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="320" fill="none">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Gradient: Deep Obsidian Navy -->
     <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050814" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#090d16" />
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="50%" stop-color="#0a1124" />
+      <stop offset="100%" stop-color="#050813" />
+    </linearGradient>
+
+    <!-- Border Accent Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.6" />
     </linearGradient>
 
     <!-- LIVE ANIMATED TITLE GRADIENT -->
     <linearGradient id="heroTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8">
-        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#f472b6;#06b6d4;#38bdf8" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#f472b6;#06b6d4;#38bdf8" dur="6s" repeatCount="indefinite" />
       </stop>
       <stop offset="30%" stop-color="#818cf8">
-        <animate attributeName="stop-color" values="#818cf8;#f472b6;#06b6d4;#38bdf8;#818cf8" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#818cf8;#c084fc;#f472b6;#06b6d4;#38bdf8;#818cf8" dur="6s" repeatCount="indefinite" />
       </stop>
       <stop offset="65%" stop-color="#c084fc">
-        <animate attributeName="stop-color" values="#c084fc;#06b6d4;#38bdf8;#818cf8;#c084fc" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#c084fc;#f472b6;#06b6d4;#38bdf8;#818cf8;#c084fc" dur="6s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#f472b6">
-        <animate attributeName="stop-color" values="#f472b6;#38bdf8;#818cf8;#f472b6;#f472b6" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#f472b6;#06b6d4;#38bdf8;#818cf8;#c084fc;#f472b6" dur="6s" repeatCount="indefinite" />
       </stop>
-      <animate attributeName="x1" values="0%;100%;0%" dur="7s" repeatCount="indefinite" />
-      <animate attributeName="x2" values="100%;200%;100%" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;200%;100%" dur="8s" repeatCount="indefinite" />
     </linearGradient>
 
     <!-- SHIMMER SPECULAR BEAM GRADIENT -->
     <linearGradient id="titleShimmer" x1="-100%" y1="0%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="40%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
       <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
       <animate attributeName="x1" values="-100%;200%" dur="3.5s" repeatCount="indefinite" />
       <animate attributeName="x2" values="0%;300%" dur="3.5s" repeatCount="indefinite" />
     </linearGradient>
 
-    <!-- LIVE BREATHING GLOW FILTER -->
-    <filter id="heroGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="7" result="blur">
-        <animate attributeName="stdDeviation" values="5;9;5" dur="3s" repeatCount="indefinite" />
-      </feGaussianBlur>
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <!-- BEHIND-ONLY AMBIENT GLOW (Leaves foreground text razor-sharp) -->
+    <filter id="titleBackGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feFlood flood-color="#38bdf8" flood-opacity="0.35" result="color" />
+      <feComposite in="color" in2="blur" operator="in" />
     </filter>
 
-    <filter id="softAura" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="25" result="blur" />
+    <filter id="softAura" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
     </filter>
   </defs>
 
   <style>
-    .hero-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-    .hero-tag { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 1.5px; }
-    .hero-sub { font-family: system-ui, -apple-system, sans-serif; font-weight: 600; }
-    .chip-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; }
+    .hero-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 900; letter-spacing: -0.5px; }
+    .hero-tag { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; letter-spacing: 1.5px; }
+    .hero-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; }
+    .chip-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.3px; }
   </style>
 
   <!-- Container Base -->
-  <rect x="2" y="2" width="1196" height="316" rx="20" fill="url(#heroBg)" stroke="#1e293b" stroke-width="2" />
+  <rect x="2" y="2" width="1196" height="316" rx="20" fill="url(#heroBg)" stroke="url(#borderGrad)" stroke-width="1.8" />
 
-  <!-- Ambient Glowing Orbs in Background with gentle breathing -->
-  <circle cx="200" cy="100" r="120" fill="#38bdf8" opacity="0.08" filter="url(#softAura)">
-    <animate attributeName="opacity" values="0.06;0.12;0.06" dur="4s" repeatCount="indefinite" />
+  <!-- Ambient Glowing Orbs in Background -->
+  <circle cx="180" cy="90" r="130" fill="#38bdf8" opacity="0.10" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.08;0.16;0.08" dur="4s" repeatCount="indefinite" />
   </circle>
-  <circle cx="1000" cy="220" r="140" fill="#c084fc" opacity="0.08" filter="url(#softAura)">
-    <animate attributeName="opacity" values="0.08;0.14;0.08" dur="5s" repeatCount="indefinite" />
+  <circle cx="1020" cy="230" r="140" fill="#c084fc" opacity="0.10" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.07;0.15;0.07" dur="5s" repeatCount="indefinite" />
   </circle>
-  <circle cx="600" cy="160" r="100" fill="#f43f5e" opacity="0.06" filter="url(#softAura)">
-    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="6s" repeatCount="indefinite" />
+  <circle cx="600" cy="160" r="110" fill="#818cf8" opacity="0.08" filter="url(#softAura)">
+    <animate attributeName="opacity" values="0.06;0.12;0.06" dur="6s" repeatCount="indefinite" />
   </circle>
 
   <!-- Top Pill Badge with Live Radar Pulse -->
   <g transform="translate(600, 48)">
-    <rect x="-160" y="-14" width="320" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <rect x="-165" y="-14" width="330" height="28" rx="14" fill="#0d172a" stroke="#1e293b" stroke-width="1.5" />
     <!-- Radar ring -->
-    <circle cx="-138" cy="0" r="5" fill="none" stroke="#10b981" stroke-width="1.5">
+    <circle cx="-140" cy="0" r="5" fill="none" stroke="#10b981" stroke-width="1.5">
       <animate attributeName="r" values="5;11;5" dur="1.8s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="1;0;1" dur="1.8s" repeatCount="indefinite" />
     </circle>
     <!-- Solid dot -->
-    <circle cx="-138" cy="0" r="5" fill="#10b981" />
-    <text x="-122" y="4" fill="#38bdf8" class="hero-tag" font-size="11">THE SYSTEMATIC MENTAL MODEL &#8226; 2026</text>
+    <circle cx="-140" cy="0" r="5" fill="#10b981" />
+    <text x="-124" y="4" fill="#38bdf8" class="hero-tag" font-size="11">THE SYSTEMATIC MENTAL MODEL &#8226; 2026</text>
   </g>
 
-  <!-- MAIN HERO TITLE - Base Living Gradient Layer -->
-  <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#heroTitleGrad)" filter="url(#heroGlow)">DSA LOGIC BUILDING PLAYBOOK</text>
+  <!-- MAIN HERO TITLE - Layer 1: Ambient Background Glow (Glows behind the text without blurring letters) -->
+  <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="#38bdf8" filter="url(#titleBackGlow)">DSA LOGIC BUILDING PLAYBOOK</text>
 
-  <!-- MAIN HERO TITLE - Shimmering Specular Light Beam Layer -->
+  <!-- MAIN HERO TITLE - Layer 2: Ultra-Crisp Sharp Foreground Gradient Text -->
+  <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#heroTitleGrad)">DSA LOGIC BUILDING PLAYBOOK</text>
+
+  <!-- MAIN HERO TITLE - Layer 3: Shimmering Specular Light Beam Layer -->
   <text x="600" y="128" text-anchor="middle" class="hero-title" font-size="46" fill="url(#titleShimmer)">DSA LOGIC BUILDING PLAYBOOK</text>
 
-  <!-- DYNAMIC LIVE ROTATING SUBTITLES (Smooth 4-phrase cycle) -->
+  <!-- DYNAMIC LIVE ROTATING SUBTITLES -->
   <g>
     <!-- Phrase 1 -->
     <text x="600" y="172" text-anchor="middle" class="hero-sub" font-size="17" fill="#38bdf8">
@@ -125,27 +134,27 @@
     Input Constraints &#8594; Time Complexity &#8594; Core Pattern &#8594; Edge Cases Checklist &#8594; Clean Code
   </text>
 
-  <!-- Bottom Floating Feature Chips -->
+  <!-- Bottom Floating Feature Chips: High Contrast Dark Capsules with Vivid Text & Icons -->
   <g transform="translate(600, 256)">
-    <!-- Chip 1 -->
+    <!-- Chip 1: 7-Step Framework (Cyan) -->
     <g transform="translate(-360, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#38bdf8" class="chip-text">&#9889; 7-Step Framework</text>
+      <rect x="-78" y="-16" width="156" height="32" rx="16" fill="#0c1427" stroke="#38bdf8" stroke-width="1.6" />
+      <text x="0" y="5" text-anchor="middle" fill="#38bdf8" class="chip-text">&#9889; 7-Step Framework</text>
     </g>
-    <!-- Chip 2 -->
+    <!-- Chip 2: Thinking Ladder (Violet) -->
     <g transform="translate(-120, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#818cf8" stroke="#818cf8" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#818cf8" class="chip-text">&#129692; Thinking Ladder</text>
+      <rect x="-78" y="-16" width="156" height="32" rx="16" fill="#0f132e" stroke="#818cf8" stroke-width="1.6" />
+      <text x="0" y="5" text-anchor="middle" fill="#a5b4fc" class="chip-text">&#129692; Thinking Ladder</text>
     </g>
-    <!-- Chip 3 -->
+    <!-- Chip 3: Waste -> Tool Rx (Emerald) -->
     <g transform="translate(120, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#10b981" stroke="#10b981" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#10b981" class="chip-text">&#129520; Waste &#8594; Tool Rx</text>
+      <rect x="-78" y="-16" width="156" height="32" rx="16" fill="#081d1a" stroke="#10b981" stroke-width="1.6" />
+      <text x="0" y="5" text-anchor="middle" fill="#34d399" class="chip-text">&#129520; Waste &#8594; Tool Rx</text>
     </g>
-    <!-- Chip 4 -->
+    <!-- Chip 4: 100% Java Ready (Pink) -->
     <g transform="translate(360, 0)">
-      <rect x="-75" y="-16" width="150" height="32" rx="16" fill="#f472b6" stroke="#f472b6" stroke-width="1.5" />
-      <text x="0" y="4" text-anchor="middle" fill="#f472b6" class="chip-text">&#9749; 100% Java Ready</text>
+      <rect x="-78" y="-16" width="156" height="32" rx="16" fill="#220d1c" stroke="#f472b6" stroke-width="1.6" />
+      <text x="0" y="5" text-anchor="middle" fill="#f472b6" class="chip-text">&#9749; 100% Java Ready</text>
     </g>
   </g>
 </svg>

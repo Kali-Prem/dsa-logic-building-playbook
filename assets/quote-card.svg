@@ -2,21 +2,27 @@
   <defs>
     <!-- Card Background Gradient -->
     <linearGradient id="qBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e172a" />
-      <stop offset="50%" stop-color="#0a101f" />
-      <stop offset="100%" stop-color="#050814" />
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <!-- Border Accent Gradient -->
+    <linearGradient id="qBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.3" />
     </linearGradient>
 
     <!-- LIVE Accent Gradient -->
     <linearGradient id="qGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8">
-        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#f472b6;#06b6d4;#38bdf8" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#f472b6;#38bdf8" dur="5s" repeatCount="indefinite" />
       </stop>
       <stop offset="50%" stop-color="#818cf8">
-        <animate attributeName="stop-color" values="#818cf8;#f472b6;#06b6d4;#38bdf8;#818cf8" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#818cf8;#c084fc;#f472b6;#38bdf8;#818cf8" dur="5s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#c084fc">
-        <animate attributeName="stop-color" values="#c084fc;#06b6d4;#38bdf8;#818cf8;#c084fc" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#c084fc;#f472b6;#38bdf8;#818cf8;#c084fc" dur="5s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
@@ -24,35 +30,35 @@
     <linearGradient id="qShimmer" x1="-100%" y1="0%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="40%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9" />
       <stop offset="60%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
       <animate attributeName="x1" values="-100%;200%" dur="4s" repeatCount="indefinite" />
       <animate attributeName="x2" values="0%;300%" dur="4s" repeatCount="indefinite" />
     </linearGradient>
 
-    <!-- Glow Filter -->
+    <!-- Glow Filter for Accent Bar -->
     <filter id="qGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
   <style>
-    .q-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #ffffff; letter-spacing: -0.3px; }
-    .q-desc { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 14px; fill: #94a3b8; letter-spacing: 0.1px; }
-    .watermark { font-family: Georgia, serif; font-weight: 700; font-size: 110px; fill: #38bdf8; opacity: 0.04; }
+    .q-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 22px; fill: #ffffff; letter-spacing: -0.3px; }
+    .q-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 14px; fill: #cbd5e1; letter-spacing: 0.2px; }
+    .watermark { font-family: Georgia, serif; font-weight: 700; font-size: 100px; fill: #38bdf8; opacity: 0.08; }
   </style>
 
   <!-- Container Base -->
-  <rect x="2" y="2" width="916" height="92" rx="16" fill="url(#qBg)" stroke="#1e293b" stroke-width="1.8" />
+  <rect x="2" y="2" width="916" height="92" rx="16" fill="url(#qBg)" stroke="url(#qBorder)" stroke-width="1.6" />
 
   <!-- Left Accent Glow Bar -->
   <rect x="2" y="14" width="6" height="68" rx="3" fill="url(#qGrad)" filter="url(#qGlow)" />
 
   <!-- Background Decorative Watermark Quotes -->
-  <text x="35" y="78" class="watermark">&#8220;</text>
-  <text x="850" y="78" class="watermark">&#8221;</text>
+  <text x="35" y="76" class="watermark">&#8220;</text>
+  <text x="850" y="76" class="watermark">&#8221;</text>
 
   <!-- Centered Content Stack -->
   <g transform="translate(460, 0)">
